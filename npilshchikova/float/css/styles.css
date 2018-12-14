@@ -1,0 +1,117 @@
+body, html {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bg-image {
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+    height: 100%;
+}
+
+.page-box {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    align-content: center;
+}
+
+.forecast-box {
+    position: relative;
+    width: 90%;
+    height: 70%;
+    color: white;
+    filter: drop-shadow(0 0 4.0vw black);
+}
+
+.forecast-box p {
+    font-family: "Avenir Next";
+    font-weight: bold;
+    font-size: 2.2vw;
+}
+
+.forecast-small {
+    background-color: #bd3559;
+    box-shadow: inset 0 0 3.0vw #91213f;
+}
+
+.forecast-small p {
+    font-size: 1.3vw;
+    text-shadow: 0px 4px 10px #aa1731;
+}
+
+.cell {
+    width: 30%;
+    height: 50%;
+    float: left;
+}
+
+.half-cell {
+    height: 50%;
+}
+
+.inner-cell {
+    width: 20%;
+    float: left;
+}
+
+.weather-icon {
+    max-height: 50%;
+    filter: drop-shadow(0 -1 3px darkgrey);
+}
+
+.icon-small {
+    width: 60%;
+}
+
+.weather-icon#weather-current {
+    width: auto;
+    max-height: 75%;
+}
+
+.svg {
+    filter: brightness(100);
+}
+
+#c1 {
+    background-color: #06b3db;
+    text-shadow: 0px 4px 10px darkcyan;
+    box-shadow: inset -7px 0 1px -7px #fffede;
+}
+
+#c2 {
+    background-color: #4ed486;
+    text-shadow: 0px 4px 10px darkgreen;
+    box-shadow: inset 7px 0 1px -7px #525252;
+    box-shadow: inset -7px 0 1px -7px #525252;
+}
+
+#c3 {
+    background-color: #6139f6;
+    text-shadow: 0px 4px 10px darkblue;
+    box-shadow: inset 7px 0 1px -7px #fffede;
+}
+
+#c4 {
+    background-color: #e3b63d;
+    text-shadow: 0px 4px 10px darkgoldenrod;
+    box-shadow: inset -7px 0 1px -7px #fffede;
+}
+
+#c5 {
+    background-color: #dc3d66;
+    box-shadow: inset 7px 0 1px -7px #525252;
+    box-shadow: inset -7px 0 1px -7px #525252;
+}
+
+#c6 {
+    background-color: #bd54cd;
+    text-shadow: 0px 4px 10px darkorchid;
+    box-shadow: inset 7px 0 1px -7px #fffede;
+}
