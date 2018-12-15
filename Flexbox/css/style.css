@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: white;
+  background: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+li {
+  list-style-type: none;
+}
+
+.weather-widget {
+  display: flex;
+  justify-content: center;
+}
+.weather-widget__main-wrapper {
+  background: url(../images/Paris.png);
+  background-repeat: no-repeat;
+  align-self: center;
+  width: 700px;
+  height: 430px;
+}
+.weather-widget__inwrapper {
+  height: 328px;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 100px;
+}
+.weather-widget__week-day {
+  font-size: 2em;
+}
+.weather-widget__item-temp {
+  font-size: 4.5em;
+  font-weight: 900;
+}
+.weather-widget__item-span {
+  position: relative;
+}
+.weather-widget__item-span:after {
+  content: "o";
+  position: absolute;
+  font-size: 0.6em;
+  right: -44px;
+  top: -4px;
+}
+.weather-widget__item-town {
+  font-size: 1.2em;
+}
+.weather-widget__digit-wind {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.weather-widget__list-temp {
+  padding-top: 75px;
+}
+.weather-widget__list-day {
+  padding-top: 85px;
+  padding-right: 32px;
+}
+.weather-widget__item-town {
+  padding-bottom: 25px;
+}
+
+.weather-nav {
+  display: flex;
+  justify-content: center;
+}
+.weather-nav__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 7px;
+  height: 90px;
+  border-right: 1px solid white;
+  padding: 0px 40px;
+}
+.weather-nav__item:nth-child(2) .weather-nav__day-condition {
+  margin-bottom: 17px;
+}
+.weather-nav__item:nth-child(3) .weather-nav__day-condition {
+  margin-bottom: 15px;
+}
+.weather-nav__item:nth-child(5) {
+  border: 0;
+}
+.weather-nav__day-condition {
+  margin: 8px auto;
+  width: 38px;
+}
+.weather-nav__btn--prev {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+.weather-nav__btn--prev:before {
+  content: url("../images/back.png");
+}
+.weather-nav__btn--next {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+.weather-nav__btn--next:before {
+  content: url("../images/next.png");
+}
+.weather-nav__btn--next, .weather-nav__btn--prev {
+  padding-top: 40px;
+}
+.weather-nav__digit {
+  position: relative;
+}
+.weather-nav__digit:after {
+  position: absolute;
+  content: "o";
+  font-size: 0.4em;
+  top: -5px;
+  right: 15px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 700px) {
+  .weather-widget {
+    background: url("../images/Paris.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .weather-widget__main-wrapper {
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    background: none;
+  }
+  .weather-widget__inwrapper {
+    height: 75%;
+    font-size: 40px;
+  }
+  .weather-widget__list-temp {
+    padding-top: 210px;
+  }
+  .weather-widget__list-day {
+    padding-right: 105px;
+  }
+  .weather-widget__item-span:after {
+    right: -80px;
+    top: -20px;
+  }
+  .weather-widget__conditions {
+    width: 100px;
+  }
+
+  .weather-nav {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .weather-nav__item {
+    padding: 0;
+    margin: 0;
+    flex-basis: 170px;
+    height: 200px;
+    font-size: 30px;
+  }
+  .weather-nav__item:nth-child(2) .weather-nav__digit {
+    padding-top: 35px;
+  }
+  .weather-nav__item:nth-child(2) .weather-nav__digit:after {
+    right: 60px;
+    top: 20px;
+  }
+  .weather-nav__item:nth-child(3) .weather-nav__digit {
+    padding-top: 35px;
+  }
+  .weather-nav__item:nth-child(3) .weather-nav__digit:after {
+    right: 60px;
+    top: 20px;
+  }
+  .weather-nav__day-condition {
+    width: 80px;
+  }
+  .weather-nav__day {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .weather-nav__button-wrap {
+    display: none;
+  }
+  .weather-nav__digit {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .weather-nav__digit:after {
+    right: 58px;
+    top: 5px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .weather-widget {
+    background: url("../images/Paris.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .weather-widget__main-wrapper {
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    background: none;
+  }
+  .weather-widget__inwrapper {
+    height: 75%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 0;
+    font-size: 100%;
+  }
+  .weather-widget__list-temp, .weather-widget__list-day {
+    align-self: flex-start;
+    padding-left: 20px;
+  }
+
+  .weather-nav {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 25%;
+  }
+  .weather-nav__button-wrap {
+    display: none;
+  }
+  .weather-nav__item {
+    padding: 0;
+    flex-basis: 30%;
+    height: 60%;
+    font-size: 110%;
+  }
+  .weather-nav__item:nth-child(5) {
+    display: none;
+  }
+  .weather-nav__item:nth-child(4) {
+    border: 0;
+  }
+  .weather-nav__item:nth-child(2) .weather-nav__digit {
+    padding-top: 3%;
+  }
+  .weather-nav__item:nth-child(2) .weather-nav__digit:after {
+    top: -5%;
+  }
+  .weather-nav__day-condition {
+    height: auto;
+  }
+  .weather-nav__digit:after {
+    right: 35%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

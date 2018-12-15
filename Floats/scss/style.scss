@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 360px;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.weather-widget {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/Paris.png);
+    min-width: 695px;
+    height: 435px;
+
+    &__wrapper {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__list-day {
+        width: 17%;
+        height: 60px;
+        float: right;
+        margin: 65px 0;
+    }
+
+    &__week-day {
+        font-size: 2em;
+    }
+
+    &__list-temp {
+        float: right;
+        width: 30%;
+        line-height: 45px;
+        padding: 30px;
+        margin: 50px 0;
+    }
+
+    &__item-temp {
+        font-size: 4.5em;
+        font-weight: 900;
+    }
+
+    &__item-span {
+        position: relative;
+
+        &:after {
+            content: 'o';
+            position: absolute;
+            font-size: 0.6em;
+            right: -44px;
+            top: -4px;
+        }
+    }
+
+    &__item-town {
+        font-size: 1.2em;
+    }
+
+    &__digit-wind {
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+
+    // Bottom navigation
+
+    &__list-nav {
+        padding-left: 115px;
+        text-align: center;
+        position: relative;
+        margin-top: 32px;
+
+        li:nth-child(2),
+        li:nth-child(3) {
+
+            .weather-widget__day-condition {
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+    &__item-nav {
+        width: 115px;
+        float: left;
+    }
+
+    &__day-condition {
+        padding: 10px;
+    }
+
+    &__digit {
+        display: block;
+    }
+
+    &__btn--prev {
+        position: absolute;
+        display: inline-block;
+        top: 35px;
+        left: 60px;
+        border: 0;
+        padding: 0;
+        background: none;
+        color: white;
+        cursor: pointer;
+
+        &:before {
+            content: url('../images/back.png');
+        }
+    }
+
+    &__btn--next {
+        position: absolute;
+        right: 80px;
+        top: 35px;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        background: none;
+        color: white;
+        cursor: pointer;
+
+        &:before {
+            content: url('../images/next.png');
+        }
+    }
+
+    &__digit {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: 'o';
+            font-size: 0.4em;
+            top: -5px;
+            right: 40px;
+        }
+    }
+
+    &__list-nav {
+        li:nth-child(2) {
+            .weather-widget__day-condition {
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+        }
+
+        li:nth-child(3) {
+            .weather-widget__day-condition {
+                padding-bottom: 11px;
+            }
+        }
+    }
+}
+
+// iPad resolution
+@media screen and (max-width: 768px) and (min-width: 700px) {
+
+    .weather-widget {
+        height: 900px;
+        background-repeat: none;
+        background-size: cover;
+
+        &__wrapper {
+            height: 675px;
+        }
+
+        &__inwrapper {
+            padding-top: 40px;
+        }
+
+        &__list-day {
+            float: left;
+            padding-left: 20px;
+            width: 40%;
+            height: 150px;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        &__list-temp {
+            padding: 0;
+            height: 400px;
+            padding-left: 90px;
+            width: 60%;
+            margin-top: 200px;
+            margin-bottom: 0;
+        }
+
+        &__item-span {
+            font-size: 2.5em;
+
+            &::after {
+                right: -65px;
+            }
+        }
+
+        &__item-town {
+            font-size: 2.8em;
+            padding: 20px;
+        }
+
+        &__item-wind {
+            font-size: 1.8em;
+        }
+
+        &__conditions {
+            width: 100px;
+            padding-left: 20px;
+        }
+
+        &__list-nav {
+            height: 200px;
+            padding-left: 40px;
+
+            li:nth-child(5) {
+                margin: 0;
+            }
+        }
+
+        &__day {
+            font-size: 1.8em;
+        }
+
+        &__item-nav {
+            margin-right: 50px;
+        }
+
+        &__day-condition {
+            width: 90px;
+        }
+
+        &__digit {
+            font-size: 1.5em;
+        }
+
+        &__btn--prev {
+            top: 75px;
+            left: 15px;
+        }
+
+        &__btn--next {
+            top: 75px;
+            right: 15px;
+        }
+    }
+}
+
+// Mobile resolution
+@media screen and (max-width: 700px) {
+
+    html,body {
+        background: none;
+    }
+
+    .weather-widget {
+        position: initial;
+        transform: none;
+        min-width: 0;
+        background: url(../images/Paris.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+
+        ul {
+            margin: 0;
+        }
+
+        &__list-nav {
+            margin: 0;
+            padding: 0;
+            // padding-top: 100%;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &__list-day,
+        &__list-temp {
+            float:none;
+        }
+
+        &__list-temp {
+            text-align: center;
+            width: auto;
+        }
+
+        &__item-span {
+            display: inline-block;
+            padding-top: 40px;
+        }
+
+        &__list-day {
+            width: auto;
+            padding-left: 15%;
+        }
+
+        &__item-nav {
+            width: 70px;
+        }
+
+        &__list-nav {
+            width: 290px;
+        }
+
+        &__btn--next {
+            right: -10px;
+        }
+
+        &__btn--prev {
+            top: 37px;
+            left: -10px;
+        }
+
+        &__day {
+            font-size: 0.9em;
+        }
+
+        &__digit {
+            &::after {
+                right: 20px;
+            }
+        }
+    }
+}
