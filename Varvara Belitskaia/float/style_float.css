@@ -1,0 +1,240 @@
+html {
+    font-size: 14px; 
+}
+
+body {
+    background-color: #4e5860;
+    background-image: radial-gradient(at top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+    background-repeat: no-repeat;
+    
+}
+
+.widget {
+    width: 389px; 
+    height: 464px;
+    background-color: #f1f8f9;
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 0px 21px 20.16px 0.84px rgba(0, 0, 0, 0.15);
+    margin: 50px auto 0;
+}
+
+.weather-image-container {
+    width: 100%;
+    height: 52%;
+    float: left;
+    position: relative;
+}
+
+.weather-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.refresh-icon {
+    margin-top: 16px;
+    float: right;
+    width: 9.5%;
+}
+
+.current {    
+    width: 100%;
+    height: 18.5%;
+    float: left;
+}
+
+p { 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.temperature {
+    float: left;
+    position: relative;
+    width: 29.5%;
+}
+
+.temperature-value {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4.11rem;
+    color: #8d9396;
+    margin-left: 18%;
+    float: left;
+}
+
+.temperature-value::after {
+    content: ' O';
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #8d9396;
+    position: absolute;
+    top: 18%;
+}
+
+.middle-column {
+    float: left;
+    width: 53.7%;
+}
+
+.weather-text {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.71rem;
+    color: #bac2c6;
+    margin-top: 7px;
+    float: left;
+}
+
+.location {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.14rem;
+    color: #bac2c6;
+    float: left;
+}
+
+.date {
+    float: right;
+    width: 16.8%;
+    height: 80.23%; 
+    background-color: #54bae6;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.date p {
+    font-family: open-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-align: center;
+}
+
+.month {
+    font-size: 1em; 
+    margin-top: 21%;
+}
+
+.day {
+    font-size: 1.28rem;
+}
+
+footer {
+    background-color: #2e3335;
+    width: 100%;
+    height: 29.5%;
+    border-radius: 0 0 10px 10px;
+    float: left;
+    position: relative;
+}
+
+.stats {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    color: white;
+    width: 100%;
+    position: relative;
+    top: 33.8%;
+}
+
+.stats img { 
+    margin-right: 16px;  
+    float: left;
+}
+
+.stats p {
+    float: left;
+    /* выравнивание иконки и текста */
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle; 
+}
+
+.wind {
+    position: absolute;
+    left: 11.8%; 
+}
+
+.humidity {
+    position: absolute;
+    left: 43.4%; 
+}
+
+.sun {
+    position: absolute;
+    left: 69.4%; 
+}
+
+.scroller {
+    position: absolute;
+    width: 100%;
+    bottom: 11.8%;
+    text-align: center;
+ }
+
+ .scroller img {
+    margin: 4px;  
+    vertical-align: middle;  
+}  
+
+/* Смартфоны - виджет 90% ширины экрана, нет футера, шрифты более мелкие */
+@media (max-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px) {
+
+    html {
+        font-size: 12px;
+    }
+    
+    .widget {
+        width: 90%;
+        min-width: 300px; 
+        height: 328px;
+        border-radius: 10px;
+    }
+
+    .weather-image-container {
+        height: 73.3%;
+    }
+
+    .current {
+        height: 26.7%;
+    }
+
+    .date {
+        height: 65%;
+    }
+
+    footer{
+        display: none;
+     }
+
+}
+
+/* Планшеты и мониторы с ретиной - шрифты более крупные, иконка с погодой более крупная */
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {  
+  
+    html {
+        font-size: 15px;
+    }
+
+    .widget {      
+        min-width: 420px;
+        height: 540px;
+    }
+
+    .weather-icon {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+    }
+
+}   
