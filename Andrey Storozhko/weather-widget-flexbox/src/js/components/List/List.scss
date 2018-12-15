@@ -1,0 +1,38 @@
+@import '../../../scss/mixins';
+
+.days__list {
+  color: #ffffff;
+  height: 50%;
+  background-color: rgba(44, 54, 39, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  @include tablets(){
+    padding: 20px 30px;
+  }
+  @include phones(){
+    padding: 20px 30px;
+  }
+  &:hover{
+    cursor: default;
+  }
+}
+
+.day {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  &__name,&__temp {
+    font-size: 0.75rem;
+  }
+  &__name{
+    padding-bottom: 10px;
+  }
+  &__temp{
+    padding-top: 10px;
+  }
+  &__weather{
+    font-size: 15px;
+  }
+}

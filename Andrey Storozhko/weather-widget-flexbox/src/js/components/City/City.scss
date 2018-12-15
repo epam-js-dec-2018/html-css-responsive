@@ -1,0 +1,33 @@
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  &--is-open{
+    cursor: pointer;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+  }
+  &__weather{
+    color: white;
+    font-size: 60px;
+    padding-top: 45px;
+    &--is-open{
+      color: white;
+      font-size: 40px;
+    }
+  }
+  &__main{
+    font-size: 0.9rem;
+    display: flex;
+    color: white;
+    padding-top: 45px;
+    &--is-hidden{
+      display: none;
+    }
+  }
+}
