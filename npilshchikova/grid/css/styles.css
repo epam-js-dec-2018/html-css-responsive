@@ -1,3 +1,8 @@
+@font-face {
+    font-family: AvenirNext;
+    src: url(../fonts/AvenirNext-Regular.ttf);
+}
+
 body, html {
     height: 100%;
 }
@@ -17,29 +22,34 @@ img {
 
 .page-box {
     position: absolute;
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    grid-template-columns: 7.5% 85% 7.5%;
+    justify-content: center;
+    align-content: center;
     top: 0%;
     height: 100%;
 }
 
 .forecast-box {
+    grid-column: 2;
+    grid-row: 2;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: 50% 50%;
-    width: 90%;
-    height: 70%;
     color: white;
     filter: drop-shadow(0 0 4.0vw black);
 }
 
 .forecast-box p {
-    font-family: "Avenir Next";
+    font-family: AvenirNext;
     font-weight: bold;
     font-size: 2.2vw;
 }
 
 .forecast-small {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, 25%);
     grid-template-rows: 50% 50%;
     background-color: #bd3559;
     box-shadow: inset 0 0 3.0vw #91213f;
@@ -51,31 +61,34 @@ img {
 }
 
 .cell {
-    /* width: 30%; */
-    /* height: 50%; */
+    display: grid;
+    grid-template-columns: 100%;
+    align-content: center;
+    justify-items: center;
 }
 
-.half-cell {
-    /* height: 50%; */
-}
+/* .half-cell {
+    align-items: center;
+    justify-items: center;
+} */
 
 .inner-cell {
     /* width: 20%; */
 }
 
 .weather-icon {
-    max-height: 50%;
+    max-height: 100%;
     filter: drop-shadow(0 -1 3px darkgrey);
 }
 
 .icon-small {
     width: 60%;
 }
-
+/* 
 .weather-icon#weather-current {
     width: auto;
-    max-height: 75%;
-}
+    max-height: 100%;
+} */
 
 .svg {
     filter: brightness(100);
