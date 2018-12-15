@@ -1,0 +1,189 @@
+    html, body {
+        padding: 0;
+        margin: 0;
+        background: #1b2d3c;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    h4 {
+        font-weight:100;
+    }
+
+    button {
+        background:none;
+        border:none;
+        color:#fff;
+    }
+
+    section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .vertical-line {
+        height: 72.2px;
+        position: absolute;
+        margin-left:115px;
+        margin-top:34px;
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .grid-container {
+        display: grid;
+        background-image:url(img/paris.png);
+        background-repeat: no-repeat;
+        grid-template-columns: auto;
+        grid-template-rows: 0.7fr 435px 0.8fr;
+        grid-template-areas: "." "weather" ".";
+    }
+  
+    .weather {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.9fr 0.1fr;
+        grid-template-areas: ". info" "switch switch";
+        grid-area: weather;
+    }
+  
+    .grade {
+        font-size: 5.5em;
+        font-weight: 900;
+    }
+
+    .city {
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+
+    .switch {
+        display: grid;
+        background: rgba(0,0,0,0.3);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.8fr;
+        grid-template-areas: "day-switch";
+        grid-area: switch;
+    }
+    
+    .day-switch {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+        grid-template-rows: 0.2fr;
+        margin:0 25px;
+        grid-template-areas: ". . . . . .";
+        grid-area: day-switch;
+    }
+    
+    .days-info {
+        display:grid;
+        justify-content: center;    
+        justify-items: center;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "day detail";
+        grid-area: info;
+    }
+
+    .weekday{
+        margin-top: 30px;
+        font-size: 2.1em;
+        text-align: center;
+    }
+
+    .month {
+        text-align: center;
+    }
+    
+    .day { 
+        grid-area: day; 
+    }
+    
+    .detail { 
+        grid-area: detail;
+    }
+    
+    
+    @media all and (-ms-high-contrast:none) {
+        .grid-container {
+        display: -ms-grid;
+        -ms-grid-columns: auto;
+        -ms-grid-rows: 0.7fr 494px 0.8fr;
+        }
+    
+        .weather {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1.9fr 0.1fr;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 1;
+        -ms-grid-col-span: 1;
+        }
+    
+        .switch {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 1;
+        -ms-grid-col-span: 2;
+        }
+    
+        .day-switch {
+        display: -ms-grid;
+        -ms-grid-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+        -ms-grid-rows: 1fr;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 1;
+        -ms-grid-col-span: 1;
+        }
+    
+        .info {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 2;
+        -ms-grid-col-span: 1;
+        }
+    
+        .day {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 1;
+        -ms-grid-col-span: 1;
+        }
+    
+        .detail {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-col: 2;
+        -ms-grid-col-span: 1;
+        }
+    
+    }
+
+    @media (min-width:690px) {
+        .grid-container {
+            grid-template-columns: 696px;
+        }
+    }
