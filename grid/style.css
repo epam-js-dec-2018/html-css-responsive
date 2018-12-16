@@ -1,0 +1,107 @@
+body {
+    font-family: ﻿Lato-Light, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, sans-serif;
+    color: white;
+}
+
+.background {
+    width: 50em;
+    height: 37.5em;
+    background-position: center;
+    background-image: url(image/Light_source@1X.png);
+    background-color: #213546;
+    background-repeat: no-repeat;
+    margin-left: 20%;
+    position: relative;
+}
+
+.city_photo {
+    background-image: url(image/Paris@1.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 27em;
+    width: 43.5em;
+}
+
+.current_day {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.temperature_data {
+    text-align: left;
+    margin-top: 3.75em;
+    align-content: center;
+    justify-content: center;
+    grid-column-start: 11;
+}
+.date {
+    width: 8em;
+    text-align: left;
+    margin-top: 3.75em;
+    align-content: center;
+    justify-content: center;
+    grid-column-start: 10;
+}
+
+.day {
+    font-size: 230%;
+    text-align: left;
+}
+
+.month {
+    font-size: 100%;
+    text-align: left;
+}
+
+.temperature {
+    font-family: ﻿Lato-Black, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, monospace;
+    font-weight: 900;
+    font-size: 700%;
+    line-height: 88%;
+}
+
+.country {
+    font-size: 140%;
+}
+
+.wind {
+    font-size: 200%;
+}
+
+.mph {
+    font-family: ﻿Lato-Bold, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+    font-size: 100%;
+}
+
+.week {
+    height: 20%;
+    width: 100%;
+    display: grid;
+}
+
+td {
+    font-size: 110%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: center;
+}
+
+table {
+    padding: 0 0 2em;
+    width: 100%;
+}
+
+.cell {
+    width: 23%;
+    border-right: 1px solid white;
+}
