@@ -1,0 +1,171 @@
+.widget {
+  margin: 0 auto;
+  max-width: 390px;
+  height: auto;
+  background-color: rgba(0,0,0,0);
+  border-radius: 15px;
+  box-shadow: 0 21px 21px 4px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0,0,0, 0.07);
+
+  &__weather_info {
+    &::before {
+      content: "";
+      display: block;
+      float: right;
+      margin: 10px 10px 0 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('images/refresh.png');
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: top right;
+    }
+
+    position: relative;
+    padding-bottom: 10px;
+    background-color: #f1f8f9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &__img {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      margin-left: -70px;
+      width: 140px;
+      height: auto;
+    }
+
+    &__list {
+      display: block;
+      padding-top: 55%;
+
+      &__list_item {
+        display: inline-block;
+
+        &__gedree {
+          float: left;
+          padding-left: 20px;
+
+          font-family: 'Proxima Nova Light', 'Open Sans', sans-serif;
+          font-size: 4.1rem;
+          font-weight: 300;
+          text-align: right;
+          color: #8d9396;
+        }
+
+        &__city {
+          float: left;
+          padding: 10px 0 0 10px;
+
+          &__sky {
+            display: block;
+            font-family: 'Source Sans Pro', 'Source Sans Pro Light',  sans-serif;
+            font-size: 1.71rem;
+            font-weight: 300;
+            text-align: left;
+            color: #bac2c6;
+          }
+
+          &__name {
+            display: block;
+            font-family: 'Source Sans Pro', 'Source Sans Pro Semibold', sans-serif;
+            font-size: 1.143rem;
+            font-weight: 600;
+            text-align: left;
+            color: #a2a9ad;
+          }
+        }
+
+        &__date {
+          float: right;
+          padding: 15px 20px;
+          background-color: #54bae6;
+
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          color: #FFF;
+          text-transform: uppercase;
+          line-height: 22px;
+
+          &__month {
+            display: block;
+          }
+
+          &__day {
+            display: block;
+            font-size: 1.286rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__weather_params {
+    display: block;
+    padding-top: 10%;
+    background-color: #2e3335;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    &__params_list {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+
+      &__params_item {
+        display: inline-block;
+        float: left;
+        width: 33.333%;
+        text-align: center;
+
+        &:last-child {
+          padding-right: 0;
+          float: right;
+        }
+
+        &__img_wet {
+          margin-left: 15%;
+        }
+
+        &__wind_value, &__wet_value, &__sun_value {
+          display: inline-block;
+          padding-left: 12%;
+          vertical-align: top;
+          line-height: 22px;
+
+          font-family: 'Proxima Nova', sans-serif;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+    }
+
+    &__params_pagination {
+      display: block;
+      margin: 0 auto;
+      padding: 5% 0;
+      width: 10%;
+
+      &__item {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        border: 2px solid #44494a;
+
+        &--active {
+          background-color: #fff;
+          border: 2px solid #fff;
+        }
+      }
+    }
+
+    @media screen and (max-width: 330px) {
+      &__params_pagination {width: 15%;}
+    }
+
+  }
+}
