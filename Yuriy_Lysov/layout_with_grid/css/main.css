@@ -1,0 +1,97 @@
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Main";
+  src: url(../fonts/Avenir/AvenirLTStd-Black.otf); }
+@font-face {
+  font-family: "Avenir-Light";
+  src: url(../fonts/Avenir/AvenirLTStd-Light.otf); }
+/* Body */
+body {
+  margin: 0; }
+
+/* Background */
+.background {
+  background-image: url("../img/background.jpg");
+  filter: brightness(0.8) blur(10px);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0;
+  z-index: -999; }
+
+/* Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  margin: auto; }
+  .container-small {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 205px));
+  grid-auto-rows: minmax(100px, 205px);
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center; }
+  .grid img {
+    margin: auto; }
+  .grid .block {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Avenir-Main', 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 800;
+    color: white; }
+    .grid .block-small {
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+      font-family: 'Avenir-Light', 'Courier New', Courier, monospace;
+      font-size: 12px;
+      font-weight: 400;
+      color: white; }
+    .grid .block-first {
+      background-color: #06b3db; }
+    .grid .block-second {
+      background-color: #4ed486; }
+    .grid .block-third {
+      position: relative;
+      background-color: #6139f6; }
+    .grid .block-fourth {
+      background-color: #e3b63d; }
+    .grid .block-fifth {
+      background-color: #dc3d66;
+      position: relative; }
+      .grid .block-fifth_top {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        height: 50%; }
+        .grid .block-fifth_top img {
+          height: 63px;
+          width: 65px; }
+      .grid .block-fifth_bottom {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        height: 50%;
+        background-color: #bd3559; }
+        .grid .block-fifth_bottom p {
+          padding: 5px;
+          margin: 0; }
+        .grid .block-fifth_bottom img {
+          width: 23px;
+          height: 20px;
+          margin: 0; }
+    .grid .block-sixth {
+      background-color: #bd54cd;
+      position: relative; }
+
+/*# sourceMappingURL=main.css.map */
