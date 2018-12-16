@@ -1,7 +1,6 @@
 .widget {
   display: grid;
   grid-template-rows: 70% 30%;
-  align-items: center;
 
   margin: 0 auto;
   max-width: 390px;
@@ -48,8 +47,6 @@
       &__list_item {
 
         &__gedree {
-
-          //make a mixin?
           font-family: 'Proxima Nova Light', 'Open Sans', sans-serif;
           font-size: 4.1rem;
           font-weight: 300;
@@ -62,7 +59,6 @@
           grid-template-rows: 50% 50%;
           padding-left: 5%;
 
-          //make a mixin?
           &__sky {
             font-family: 'Source Sans Pro', 'Source Sans Pro Light',  sans-serif;
             font-size: 1.71rem;
@@ -86,7 +82,6 @@
           height: 100%;
 
           background-color: #54bae6;
-
           font-family: 'Open Sans', sans-serif;
           font-size: 1rem;
           font-weight: bold;
@@ -109,7 +104,7 @@
 
   &__weather_params {
     display: grid;
-    grid-tempate-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
     padding-top: 10%;
     background-color: #2e3335;
     border-bottom-left-radius: 10px;
@@ -136,8 +131,6 @@
 
         &__wind_value, &__wet_value, &__sun_value {
           padding-left: 20%;
-
-          //mixin?
           font-family: 'Proxima Nova', sans-serif;
           font-size: 1rem;
           font-weight: bold;

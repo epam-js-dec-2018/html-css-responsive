@@ -24,7 +24,6 @@ html {
 .widget {
   display: grid;
   grid-template-rows: 70% 30%;
-  align-items: center;
   margin: 0 auto;
   max-width: 390px;
   background-color: rgba(0, 0, 0, 0);
@@ -99,7 +98,7 @@ html {
           font-size: 1.286rem; }
   .widget__weather_params {
     display: grid;
-    grid-tempate-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
     padding-top: 10%;
     background-color: #2e3335;
     border-bottom-left-radius: 10px;
