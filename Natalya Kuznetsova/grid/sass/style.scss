@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('fonts/ofont.ru_Proxima Nova_0.ttf');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/ofont.ru_Proxima Nova.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+.weather {
+  margin: 0 auto;
+  padding: 80px 0 55px 0;
+  max-width: 800px;
+  background-color: #4e5860;
+  background-image: radial-gradient(at top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0) 50%);
+}
+
+@import "widget";
+
+@media screen and (max-width: 800px) {
+  .weather {width: 100%;}
+}
+
+@media screen and (max-height: 560px) {
+  .weather {padding: 10px 0;}
+}
