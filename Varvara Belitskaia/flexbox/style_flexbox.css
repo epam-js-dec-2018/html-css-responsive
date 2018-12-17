@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 html {
     font-size: 14px;
 }
@@ -52,11 +61,6 @@ body {
     width: 100%;
     height: 18.5%;
     justify-content: space-between;
-}
-
-p { 
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .temperature {
@@ -120,14 +124,11 @@ p {
     margin-right: 0;
 }
 
-.date p {
+.month, .day {
     font-family: open-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
     color: white;
-}
-
-.month {
     font-size: 1em; 
 }
 
@@ -188,9 +189,10 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+    font-size: 0;
  }
 
- .scroller img {
+.scroller img {
     margin: 4px;   
 }
 
@@ -261,12 +263,4 @@ footer {
         transform: scale(1.5);
     }
 
-}  
-
-
-
-
-
- 
-
-
+}

@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 html {
     font-size: 14px; 
 }
@@ -9,7 +18,7 @@ body {
     display: -ms-grid;
     display: grid;
     justify-content: center;
-    align-items: center;  
+    align-items: center;       
 }
 
 .widget {
@@ -65,11 +74,6 @@ body {
     grid-template-columns: 29.5% 53.7% 16.8%;
     -ms-grid-columns: 29.5% 53.7% 16.8%;
     justify-content: stretch;
-}
-
-p { 
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .temperature {
@@ -144,19 +148,18 @@ p {
     margin-right: 0;
 }
 
-.date p {
+.month, .day {
     font-family: open-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
     color: white;
+    font-size: 1em; 
 }
 
 .month {
     align-self: end;
     -ms-grid-row-align: end;
-    font-size: 1em; 
     -ms-grid-row: 1;
-    -ms-grid-column-align: stretch;
 }
 
 .day {
@@ -164,7 +167,6 @@ p {
     -ms-grid-row-align: start;
     font-size: 1.28rem;
     -ms-grid-row: 2;
-    -ms-grid-column-align: center;
 }
  
 footer {
@@ -246,9 +248,10 @@ footer {
     -ms-grid-column-align: center;
     align-items: center;
     margin-bottom: 15px;
- }
+    font-size: 0;
+}
 
- .scroller img {
+.scroller img {
     margin: 4px;   
 }  
 
@@ -262,6 +265,7 @@ footer {
     body {
         justify-content: stretch;
         align-items: stretch;  
+        padding: 10px; 
     }
     
     .widget {
