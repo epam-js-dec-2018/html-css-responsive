@@ -62,9 +62,9 @@ html, body, main   {
     line-height: 1;
     }
 
-    .weather_city > span {
-        font:  bold 14pt 'Source Sans Pro', sans-serif;
-    }
+.weather_city > span {
+    font:  bold 14pt 'Source Sans Pro', sans-serif;
+}
 
 .data {
     grid-column: 3/4;
@@ -81,7 +81,11 @@ html, body, main   {
     line-height: 1;
     color: aliceblue;
 }
-    
+
+.text_data > span {
+    font-size: 1.5em;
+}
+
 .rect_btm {  
     background: #2e3335;
     box-shadow: 0px 7px 14px 5px rgb(41, 46, 48);
