@@ -1,0 +1,171 @@
+html, body, main   {
+    margin: 0;
+    background: #4e5860;
+}
+
+.widget {
+    margin: auto;
+    padding: 80px;
+    grid-template-rows: 350px 33%;
+    grid-template-columns: 32%;
+    display: grid;
+    justify-content: center;
+}
+
+.rect_top {
+    background: aliceblue;
+    box-shadow: 0px -6px 3px 0px rgb(240, 248, 255);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: grid;
+    grid-template-rows: 15% auto 20%;
+    grid-template-columns: 25% auto 15%;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    ". . refresh"
+    "cloud cloud cloud"
+    "degree city date";
+}
+
+.refresh {
+    grid-area: refresh;
+    align-self: end;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cloud {
+    grid-area: cloud;
+ }
+ .degree {
+    grid-area: degree;
+    font:  55pt 'Source Sans Pro';
+    color: #8d9396;
+    position: relative;
+ }
+ .degree::after {
+    content: 'o';
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    font-size: 25px;
+}
+.weather_city {
+    grid-area: city;
+    justify-self: center;
+    color: #8d9396; 
+    font:  20pt 'Source Sans Pro', sans-serif;
+    line-height: 1;
+    }
+
+    .weather_city > span {
+        font:  bold 14pt 'Source Sans Pro', sans-serif;
+    }
+
+.data {
+    grid-column: 3/4;
+    justify-self: stretch;
+    align-self: stretch;
+    background: url(images/Rect_blue.png) ;   
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    }
+
+.text_data {  
+    font: 12pt 'Open Sans', sans-serif ; 
+    line-height: 1;
+    color: aliceblue;
+}
+    
+.rect_btm {  
+    background: #2e3335;
+    box-shadow: 0px 7px 14px 5px rgb(41, 46, 48);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: grid;
+    grid-template-rows: 50% 33%;
+    grid-template-columns: 15% auto 15%;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+        ". stats ."
+        ". scroller .";
+  
+}
+
+.stats {
+    grid-area: stats;
+    font: 10pt 'Lato'; 
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    align-items: end;
+    grid-gap: 10px;
+    justify-items: center;
+  
+}
+      
+.scroller {
+    grid-area: scroller;
+}
+
+.stat_item > img  {
+    margin: 0px 5px -5px 0px;
+}  
+
+
+  
+@media screen and ( min-width: 200px) 
+and ( max-width: 666px) 
+ { 
+  .widget {
+  grid-template-rows: auto 33%;
+  grid-template-columns: 95%;
+  margin: auto;
+  padding: 0;
+  }
+
+  .rect_top {
+    background: aliceblue;
+    grid-template-columns: auto 15%;
+  grid-template-areas: 
+    ". refresh" 
+    "cloud cloud" 
+    "degree ." 
+    " city ." 
+    " data .";
+    }
+   .data {
+       grid-area: data;
+   } 
+}
+
+  @media screen and  (min-width: 667px) 
+and (max-width: 1024px) { 
+    .widget {
+        grid-template-columns: 50%;
+        grid-template-rows: 300px 33%;
+        padding: 0;
+    }
+  }
+  
+@media screen and  (min-height: 1060px), 
+(min-width: 1024px)   {
+    .widget {
+        grid-template-rows: 450px 33%;
+        grid-template-columns: 60%;
+    }
+    .rect_top {
+        grid-template-columns: 25% auto 20%;
+        grid-template-rows: 15% auto 25%;
+      }
+  }
+  
+  
+
+
