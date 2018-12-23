@@ -1,0 +1,328 @@
+@import '../variables';
+
+/* Mixins */
+
+@mixin grid {
+    display: -ms-grid; 
+    display: grid;
+}
+
+@mixin g-rows($rows) {
+    @include grid;
+    -ms-grid-rows: $rows;
+    grid-template-rows: $rows;
+}
+
+
+@mixin g-cols($cols) {
+    @include grid;
+    -ms-grid-columns: $cols;
+    grid-template-columns: $cols;
+}
+
+@mixin col($col) {
+    grid-column: $col;
+    -ms-grid-column: $col;
+}
+
+@mixin row($row) {
+    grid-row: $row;
+    -ms-grid-row: $row;
+}
+
+
+
+
+/* Styles */
+
+*, *:before, *:after {
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 1.2vw;
+
+}
+
+body {
+    @include g-cols(1fr);
+
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    justify-items: center;
+
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+
+    background-color: $page-background;
+    background: $page-background-gradient;
+    font-family: 'Open Sans', sans-serif;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+
+
+.widget {
+    @include g-cols(1fr);
+    @include g-rows(50% 20% 30%);
+
+    position: relative;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+
+    background: $widget-background;
+    box-shadow: $drop-shadow;
+    border-radius: 10px;
+
+    &__img {
+        @include row(1);
+
+        justify-self: center;
+        -ms-grid-column-align: center;
+        
+        align-self: center;
+        -ms-grid-row-align: center;
+
+        margin-top: 2.35rem;
+        margin-bottom: 1.55rem;
+        width: 35%;
+    }
+
+    &__info {
+        @include row(2);
+        @include g-cols(28% 54% 18%);
+
+        padding: 0 0 5rem 0;
+        color: $font-color;
+    }
+
+    &__temp {
+        @include col(1);
+        @include row(1);
+
+        justify-self: center;
+        -ms-grid-row-align: center;
+
+        margin-left: 5%;
+        font-size: 3.6rem;
+        font-weight: 400;
+    }
+
+    &__header {
+        @include g-rows(60% 40%);
+        @include col(2);
+
+        -ms-grid-row-align: center;
+        align-self: center;
+
+        margin-left: 2.5%;
+        text-align: left;
+    }
+
+    &__title {
+        @include row(2);
+        margin: 0;
+
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    &__description {
+        @include row(1);
+        margin: 0;
+        
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    &__date {
+        @include grid();
+        @include col(3);
+
+        -ms-grid-column-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        
+        padding: 0.625rem 5%;
+        text-align: center;
+
+        background-color: $date-background;
+        color: $date-color;
+        font-size: 0.8rem;
+        font-weight: 800;
+        line-height: 1.8;
+        text-transform: uppercase;   
+    }
+
+    &__details {
+        @include row(3);
+        @include g-cols(1fr 1fr 1fr);
+
+        padding: 1.875rem 5.75% 3.75rem 5.75%;
+
+        background: $details-background;
+        color: $details-color;
+        border-radius: 0 0 9px 9px;
+    }
+
+    &__detail {
+        @include g-cols(1fr 1fr);
+        grid-gap: 12%;
+
+        align-items: start;
+
+        font-size: 0.875rem;
+
+
+        &--wind {
+            @include col(1);
+        }
+
+        &--humidity {
+            @include col(2);
+        }
+
+        &--sun {
+            @include col(3);
+        }
+
+        dt {
+            @include grid;
+            @include col(1);
+
+            -ms-grid-column-align: center;
+            justify-items: end;
+            -ms-grid-row-align: center;
+            align-items: center;
+        }
+
+        img {
+            height: 1.25rem;
+            width: auto;
+        }
+
+        dd {
+            @include col(2);
+
+            margin-left: 0;
+            text-align: left;
+        }
+    }
+
+    &__refresh {
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        width: 5%;
+        height:  1.25rem;
+
+        border: none;
+        background: url('assets/refresh.svg') no-repeat;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        bottom: 1.25rem; 
+    }
+
+    &__control {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin: 1.125%;
+
+        border: 2px solid $controls-border;
+        border-radius: 100%;
+
+        &--active {
+            border: 2px solid $control-active-color;
+            background: $control-active-color;
+        }
+    }
+
+   
+}
+
+
+
+
+/* Media */
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    
+    html {
+        font-size: 3.2vw;
+    }
+    .widget {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+   
+    html {
+        font-size: 2.5vw;
+    }
+    .widget {
+        @include g-rows(40.5% 28.5% 31%);
+        width: 70%;
+
+        &__img {
+            margin: 0;
+            width: 25%;
+        }
+
+        &__info {
+            margin: 0;
+            padding: 0 0 2rem 0;
+        }
+
+        &__details {
+            padding: 0.5rem 6.75% 1.3rem 6.75%;
+        }
+
+        &__controls {
+            bottom: 0.65rem;
+        }
+    }
+}
+
+/* For IE11 */ 
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    
+    body {
+        overflow: hidden;
+    }
+
+    .widget {
+        margin-top: 50vh;
+        transform: translateY(-50%);
+
+        &__detail {
+            img {
+                width: 1.25rem;
+            }
+            dd {
+               margin: 0;
+               text-align: left;
+            }
+        }
+        &__date {
+            -ms-grid-column-align: end;
+            padding: 0.625rem 30%;
+        }
+    }
+}
