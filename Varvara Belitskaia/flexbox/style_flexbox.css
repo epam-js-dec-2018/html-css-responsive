@@ -21,11 +21,10 @@ body {
 }
 
 .widget {
-    margin-top: 50px;
+    margin: 50px 0 0;
     display: flex;
     flex-direction: column;
     width: 20%;
-    box-sizing: border-box;
     min-width: 389px; 
     height: 464px;
     background-color: #f1f8f9;
@@ -34,7 +33,6 @@ body {
 }
 
 .weather-image-container{
-    width: 100%;
     height: 52%;
     display: flex;
     justify-content: space-between;
@@ -46,19 +44,16 @@ body {
 
 .weather-icon {
     align-self: center;
-    max-width: 100%;
-    height: auto;
 }
 
 .refresh-icon {
+    width: 9.5%;
     align-self: flex-start;
-    margin-top: 16px;
-    margin-right: 17px; 
+    margin: 16px 0 0;
 }
 
 .current {
     display: flex;
-    width: 100%;
     height: 18.5%;
     justify-content: space-between;
 }
@@ -76,17 +71,20 @@ body {
     font-style: normal;
     font-size: 4.11rem;
     color: #8d9396;
-    margin-left: 17.39%; 
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 0 18%; 
 }
 
-.degree-symbol {
+.temperature-value::after {
+    content: ' O';
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
     color: #8d9396;
-    margin-right: auto;
-    margin-top: 12px; 
+    margin: 16% 0 0;
+    display: block;
 }
 
 .middle-column {
@@ -101,7 +99,7 @@ body {
     font-style: normal;
     font-size: 1.71rem;
     color: #bac2c6;
-    margin-top: 7px;
+    margin: 7px 0 0;
 }
 
 .location {
@@ -120,11 +118,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
-.month, .day {
+.month, 
+.day {
     font-family: open-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -151,25 +149,24 @@ footer {
 .stats {
     display: flex;
     width: 100%;
-    margin-top: 46px;
-
-
+    margin: 46px 0 0;
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1em;
     color: white;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
-.stats img {   
-    margin-right: 16px;        
+.stats-img {   
+    margin: 0 16px 0 0;        
 }
 
 .wind {
     display: flex;
     align-items: center;
-    margin-left: 45px;
+    justify-self: end;
+    margin: 0 0 0 45px;
 }
 
 .humidity {
@@ -179,8 +176,9 @@ footer {
 
 .sun{
     display: flex;
+    justify-self: start;
     align-items: center;
-    margin-right: 45px;
+    margin: 0 45px 0 0;
 }
 
 .scroller {
@@ -188,79 +186,92 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
     font-size: 0;
  }
 
-.scroller img {
+.scroller-img {
     margin: 4px;   
 }
 
-/* Смартфоны - ширина виджета 90% экрана, нет футера, шрифты более мелкие */
 @media (max-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px) {
 
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .widget {
-        width: 90%;
         min-width: 300px; 
-        height: 328px; 
+        height: 328px;
         border-radius: 10px;
-        justify-content: space-between;
     }
 
-    .weather-icon {
-        padding-top: 35px; 
+    .weather-image-container {
+        height: 80%;
+    }
+
+    .empty-container,
+    .refresh-icon {
+        width: 12%;
+    }
+
+    .temperature-value::after {
+        margin: 14% 0 0;
     }
 
     .current {
-        margin-bottom: 50px;
+        height: 20%;
     }
 
-    .date {
-        margin-top: 8px;
-    }
-
-    footer{
+    footer {
         display: none;
-     }
-
-}
-
-/* Устройства с ретиной в портретной ориентации - ширина виджета 50% экрана, шрифты более крупные, иконка с погодой более крупная */
-@media only screen and (min-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {  
-  
-    html {
-        font-size: 18px;
-    }
-
-    .widget {
-        width: 50%;
-        height: 630px;
-    }
-
-    .weather-icon {
-        transform: scale(1.5);
-    }
-
-}  
-
-/* Устройства с ретиной в пейзажной ориентации - ширина виджета 36% экрана, шрифты более крупные, иконка с погодой более крупная */
-@media only screen and (min-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {  
-  
-    html {
-        font-size: 18px;
-    }
-
-    .widget {
-        width: 36%;
-        height: 630px;
-    }
-
-    .weather-icon {
-        transform: scale(1.5);
     }
 
 }
+
+@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {  
+  
+    html {
+        font-size: 16px;
+    }
+
+    img {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+    }
+
+    .widget {      
+        width: 20%;
+        min-width: 506px;
+        height: 603px;
+    }
+
+    .refresh-icon {
+        margin: 24px 0 0;
+    }
+
+    .stats {
+        margin: 66px 0 0;
+    }
+
+    .stats-img {   
+        margin: 0 21px 0 0;        
+    }
+    
+    .wind {
+        margin: 0 0 0 60px;
+    }
+    
+    .sun{
+        margin: 0 60px 0 0;
+    }
+
+    .scroller {
+        margin: 0 0 21px;
+    }
+    
+    .scroller-img {
+        margin: 5px;   
+    } 
+
+} 
