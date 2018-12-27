@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "AvenirNext Bold";
-	src: url('fonts/AvenirNext-Bold.ttf');
+	src: url('fonts/avenir-next-bold.woff');
 }
 
 main {
@@ -23,7 +23,6 @@ main {
 .weather-big-section {
 	width: 200px;
 	height: 200px;
-	background-color: #06B3DB;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
@@ -34,28 +33,30 @@ main {
 	border: 1px outset rgba(0, 0, 0, 0.17); 
 }
 
-main .weather-big-section:nth-child(2) {
+.section-one {
+	background-color: #06B3DB;
+}
+.section-two {
 	background-color: #4ed486;
 }
-main .weather-big-section:nth-child(3) {
+.section-three {
 	background-color: #6139f6;
 }
-main .weather-big-section:nth-child(4) {
+.section-four {
 	background-color: #e3b63d;
 }
-main .weather-big-section:nth-child(5) {
-	justify-content: space-between;
+.section-five {
 	background-color: #dc3d66;
 }
-main .weather-big-section:nth-child(6) {	
+.section-six {
 	background-color: #bd54cd;
 }
 
-#sixth-section-city {
-	padding-top: 15px;	
+.if-cloudy {
+	padding: 15px 0 0 0;	
 }
 
-#weather-of-the-week {
+.weather-of-the-week {
 	width: 100%;	
 	height: 100px;	
 	background-color: #bd3559;
@@ -63,11 +64,11 @@ main .weather-big-section:nth-child(6) {
 	display: flex;	
 }
 
-#weather-icon{
-	padding-top: 24px;
+.detail {
+	padding: 24px 0 10px 0;
 }
 
-.days-of-the-week {
+.weather-on-the-week {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
