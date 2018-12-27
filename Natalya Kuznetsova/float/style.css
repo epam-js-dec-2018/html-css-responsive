@@ -30,7 +30,7 @@ html {
   box-shadow: 0 21px 21px 4px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.07); }
   .widget__weather_info {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5%;
     background-color: #f1f8f9;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
@@ -54,7 +54,7 @@ html {
       height: auto; }
     .widget__weather_info__list {
       display: block;
-      padding-top: 55%; }
+      padding-top: 60%; }
       .widget__weather_info__list__list_item {
         display: inline-block; }
         .widget__weather_info__list__list_item__gedree {
@@ -112,7 +112,8 @@ html {
         display: inline-block;
         float: left;
         width: 33.333%;
-        text-align: center; }
+        text-align: center;
+        vertical-align: middle; }
         .widget__weather_params__params_list__params_item:last-child {
           padding-right: 0;
           float: right; }
@@ -156,7 +157,7 @@ html {
 @media screen and (max-width: 390px) {
   .widget {
     width: 100%; } }
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 350px) {
   html {
     font-size: 12px; } }
 @media screen and (max-height: 560px) {
