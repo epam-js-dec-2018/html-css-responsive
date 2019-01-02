@@ -1,8 +1,15 @@
 @font-face {
 	font-family: "AvenirNext Bold";
-	src: url('fonts/AvenirNext-Bold.ttf');
+	src: url('fonts/avenir-next-bold.woff');
 }
 
+main, .weather-big-section, .weather-of-the-week {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: auto;
+}
 
 main {
 	margin: auto;
@@ -25,118 +32,97 @@ main {
 	margin: 0;
 	background-color: #06B3DB;
 	font-family: "AvenirNext Bold", Arial;
-	font-size: 16px;
 	color: #ffffff;
 	border: 1px outset rgba(0, 0, 0, 0.17); 
 	text-transform: uppercase;
 	text-align: center;
 }
 
-main .weather-big-section:nth-child(2) {
+.section-one {
+	background-color: #06B3DB;
+}
+.section-two {
 	background-color: #4ed486;
 }
-main .weather-big-section:nth-child(3) {
+.section-three {
 	background-color: #6139f6;
 }
-main .weather-big-section:nth-child(4) {
+.section-four {
 	background-color: #e3b63d;
 }
-main .weather-big-section:nth-child(5) {
-	justify-content: space-between;
+.section-five {
 	background-color: #dc3d66;
 }
-main .weather-big-section:nth-child(6) {	
+.section-six {
 	background-color: #bd54cd;
 }
 
-main .weather-big-section img {
+.if-cloudy {
+	display: block;
+	padding: 25px 0 0 0;	
+}
+
+.weather-icon {
 	display: block;
 	margin: 0 auto 28px auto;
-	padding-top: 30px;
+	padding: 30px 0 0 0;
 }
 
-main .weather-big-section span {
+.cities {
 	font-size: 16px;
 	margin: auto;
-	text-align: center;
-	padding: 0;
 }
 
-#weather-of-the-week {
+.weather-of-the-week {
 	width: 100%;
-	height: 94px;
+	height: 92px;
 	background-color: #bd3559;
-	padding-top: 12px;
 	font-size: 12px;
-	
 }
 
-main .weather-big-section:nth-child(5) img {
-	height: 65px;
-	margin-bottom: 10px;
+.detail {
+	padding: 30px 0 10px 0;
+	margin: 0 auto;
 }
 
-
-main .days-of-the-week {
+.weather-on-the-week {
 	font-size: 12px;
-	text-align: center;
 	display: block;
 	float: left;
-	padding-left: 10px;
+	padding: 12px 0 0 10px;
 	margin: 0 12px 0 0;
+	text-align: center;
 }
 
-main .weather-big-section .days-of-the-week img {
+.small {
 	height: 20px;
-	padding-top: 0;
+	padding: 0;
 	margin: 10.25px auto;
 }
 
-main .weather-big-section .days-of-the-week span {
-	font-size: 12px;
+@media (min-width: 612px) {
+	main {
+		padding: 96px 0;
+	}
+	.wrapper {
+		width: 612px;
+	}
 }
 
-main, .weather-big-section, #weather-of-the-week {
-	box-sizing: border-box;
+@media (max-width: 611px) and (min-width: 408px) {
+	main {
+		padding: 0 0;
+	}
+	.wrapper {
+		width: 408px;
+	}
 }
 
-@media (max-width: 812px) {
+@media (max-width: 407px) {
 	main {
-		padding: 98px 50px;
+		padding: 0 0;
 	}
-}
-@media (max-width: 718px) {
-	main {
-		padding: 98px 10px;
-	}
-}
-@media (max-width: 638px) {
-	main {
-		padding: 98px;
-	}
-}
-@media (max-width: 630px) {
-	main {
-		padding: 98px 60px;
-	}
-}
-@media (max-width: 553px) {
-	main {
-		padding: 98px 10px;
-	}
-}
-@media (max-width: 452px) {
-	main {
-		padding: 98px;
-	}
-}
-@media (max-width: 386px) {
-	main {
-		padding: 98px 60px;
-	}
-}
-@media (max-width: 310px) {
-	main {
-		padding: 98px 10px;
+	.wrapper {
+		width: 204px;
 	}
 }
