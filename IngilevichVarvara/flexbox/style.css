@@ -33,137 +33,173 @@ body {
 
 
 .weather-widget {
+	height: 100%;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .current-weather {
+	margin-top: 10%;
+}
+
+ul.switch-day {
+	-webkit-padding-start: 0;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	align-items: center;
+	list-style: none;
+	margin: auto;
+	/*vertical-align: bottom;*/
+}
+
+.current-weather {
+	height: 35%;
 	display: flex;
 	justify-content: flex-end;
+	margin-right: 10%;
 }
-.weather-forecast {
-	height: 100%;
+
+.current-day {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-right: 4%;
+	margin-top: 3.5%;
+	opacity: 0.7;
 }
+
+.current-day span {
+	display: block;
+}
+
+.current-temp span:after {
+	content: "\00b0"
+}
+
+
+.current-day .week-day {
+	font-size: 2em;
+}
+
+.weather-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.current-day .date {
+	font-size: 0.95em;
+}
+
+
+.current-temp span {
+	font-size: 5em;
+}
+
+.current-position {
+	margin-bottom: 8%;
+	font-size: 1.5em;
+}
+
+
+.current-wind {
+	display: inline-block;
+	text-align: justify;
+
+}
+.current-wind span {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 26px;
+	padding-left: 10px;
+}
+
+.temp-value {
+	margin-bottom: -2%;
+}
+
+.current-wind .units {
+	font-size: 10px;
+	padding-left: 3px;
+}
+
+
+
 
 .weather-forecast ul {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	margin-bottom: 2%;
 }
 
 .weather-forecast ul li {
 	height: 100%;
 }
 
-/*.current-day span {*/
-	/*display: block;*/
-/*}*/
-
-/*.current-temp span:after {*/
-	/*content: "\00b0"*/
-/*}*/
-
-
-/*.current-day .week-day {*/
-	/*font-size: 20px;*/
-/*}*/
-
-/*.current-day .date {*/
-	/*font-size: 15px;*/
-/*}*/
-/*.current-temp span {*/
-	/*font-size: 90px;*/
-/*}*/
-
-/*.current-position {*/
-	/*margin-bottom: 10px;*/
-	/*font-size: 19px;*/
-/*}*/
-
-.weather-info {
-	width: 30%
+ul.switch-day span {
+	display: block;
+	padding-bottom: 10px;
 }
 
-/*.weather-info div:not(.current-temp) {*/
-	/*margin-left: 10px;*/
-/*}*/
+ul li:last-child {
+	display: none;
+}
 
-/*.current-wind {*/
-	/*display: inline-block;*/
-	/*text-align: bottom;*/
-	/**/
-/*}*/
-/*.current-wind span {*/
-	/*display: inline-block;*/
-	/*vertical-align: middle;*/
-	/*font-size: 26px;*/
-	/*padding-left: 10px;*/
-/*}*/
+.switch-day li {
+	padding: 0 25px;
+	display: table-cell;
+  	vertical-align: middle;
+	flex-direction: column;
+    text-align: center;
+    border-right: 1px solid rgb(255,255,255);
+    width: 80px;
+    height: 90px;
+}
 
-/*.current-wind .units {*/
-	/*font-size: 10px;*/
-	/*padding-left: 3px;*/
-/*}*/
 
-/*.current-wind img {*/
-	/*vertical-align: middle*/
-/*}*/
-
-/*.weather-forecast {*/
-	/*justify-content: center;*/
-	/*display:inline-block;    */
-    /*width: 690px;*/
-    /*margin-top: 120px;*/
-/*}*/
-
-/*ul.switch-day {*/
-	/*-webkit-padding-start: 0;*/
-	/*display: flex;*/
-    /*justify-content: center;*/
-    /*height: 100%;*/
-    /*align-items: center;*/
-    /*list-style: none;*/
-    /*margin: auto;*/
-    /*vertical-align: bottom;*/
-/*}*/
-
-/*ul.switch-day span {*/
-	/*display: block;*/
-	/*padding-bottom: 10px;*/
-/*}*/
-
-/*.switch-day li {*/
-	/*display: flex;*/
-	/*padding: 0 25px;*/
-	/*display: table-cell;*/
-  	/*vertical-align: middle;*/
-	/*flex-direction: column;*/
-    /*text-align: center;*/
-    /*!*border-right: 1px solid rgb(255,255,255);*!*/
-    /*width: 80px;*/
-    /*height: 90px;*/
-/*}*/
 
 /*.switch-day img {*/
 	/*width: 30px;*/
 	/*height: 26px;*/
 /*}*/
 
-/*i {*/
-  /*border: solid white;*/
-  /*border-width: 0 3px 3px 0;*/
-  /*display: inline-block;*/
-  /*padding: 5px;*/
-  /*border-radius: 3px;*/
-/*}*/
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  height: 0.9px;
+}
 
-/*.next {*/
-  /*transform: rotate(-45deg);*/
-  /*-webkit-transform: rotate(-45deg);*/
-/*}*/
+ul i:first-child {
+	margin-right: 3%;
+}
 
-/*.back {*/
-  /*transform: rotate(135deg);*/
-  /*-webkit-transform: rotate(135deg);*/
-/*}*/
+ul i:last-child {
+	margin-left: 3%;
+}
+
+
+
+hr {
+	display: none;
+	height: 5.5em;
+	margin: 0 1% 0 1%;
+}
+
+.next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.back {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
 
 
 
