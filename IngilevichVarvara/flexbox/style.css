@@ -44,16 +44,7 @@ body {
 	margin-top: 10%;
 }
 
-ul.switch-day {
-	-webkit-padding-start: 0;
-	display: flex;
-	justify-content: center;
-	height: 100%;
-	align-items: center;
-	list-style: none;
-	margin: auto;
-	/*vertical-align: bottom;*/
-}
+
 
 .current-weather {
 	height: 35%;
@@ -126,7 +117,16 @@ ul.switch-day {
 	padding-left: 3px;
 }
 
-
+ul.switch-day {
+	-webkit-padding-start: 0;
+	display: flex;
+	justify-content: center;
+	/*height: 100%;*/
+	align-items: center;
+	list-style: none;
+	margin: auto;
+	/*vertical-align: bottom;*/
+}
 
 
 .weather-forecast ul {
@@ -159,12 +159,15 @@ ul li:last-child {
     height: 90px;
 }
 
+.switch-day > *:nth-last-child(2){
+	border-right: none;
+}
 
 
-/*.switch-day img {*/
-	/*width: 30px;*/
-	/*height: 26px;*/
-/*}*/
+.switch-day img {
+	width: 30px;
+	height: 26px;
+}
 
 i {
   border: solid white;
