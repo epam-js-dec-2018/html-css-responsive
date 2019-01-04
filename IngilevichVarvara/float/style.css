@@ -10,10 +10,6 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	display: -webkit-inline-flex;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 	margin-left: 20%;
 	position: relative;
 }
@@ -22,29 +18,18 @@ body {
 .weather-widget {
 	height: 100%;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	position: relative;
 }
 
 .current-weather {
-	margin-top: 10%;
-}
-
-
-
-.current-weather {
-	height: 35%;
-	display: flex;
-	justify-content: flex-end;
+	margin-top: 15%;
 	margin-right: 10%;
+	float: right;
 }
 
 .current-day {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin-right: 4%;
+	float: left;
+	/*margin-right: 4%;*/
 	margin-top: 3.5%;
 	opacity: 0.7;
 }
@@ -53,19 +38,22 @@ body {
 	display: block;
 }
 
+.weather-info {
+	float: right;
+}
+
+.weather-forecast {
+    width: 100%;
+	position: absolute;
+	bottom: 4%;
+}
+
 .current-temp span:after {
 	content: "\00b0"
 }
 
-
 .current-day .week-day {
 	font-size: 2em;
-}
-
-.weather-info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .current-day .date {
@@ -79,71 +67,44 @@ body {
 
 .current-position {
 	margin-bottom: 8%;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
-
-.current-wind {
-	display: inline-block;
-	text-align: justify;
-
-}
-.current-wind span {
+.current-wind span.temp-value {
 	display: inline-block;
 	vertical-align: bottom;
-	font-size: 26px;
-	padding-left: 10px;
-}
-
-.temp-value {
-	margin-bottom: -2%;
+	font-size: 1.3em;
+	padding-left: 5%;
+	padding-right: 4%;
 }
 
 .current-wind .units {
-	font-size: 10px;
-	padding-left: 3px;
+	font-size: 0.8em;
 }
 
 ul.switch-day {
-	-webkit-padding-start: 0;
-	display: flex;
-	justify-content: center;
-	/*height: 100%;*/
-	align-items: center;
-	list-style: none;
-	margin: auto;
-	/*vertical-align: bottom;*/
+    width: 95%;
+    height: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-
-.weather-forecast ul {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2%;
-}
-
-.weather-forecast ul li {
-	height: 100%;
-}
-
-ul.switch-day span {
+ul.switch-day li, ul.switch-day i {
 	display: block;
-	padding-bottom: 10px;
+	float: left;
 }
 
-ul li:last-child {
-	display: none;
+ul.switch-day li span {
+    display: block;
+    margin-bottom: 5%;
 }
 
 .switch-day li {
-	padding: 0 25px;
-	display: table-cell;
+    width: 22%;
+    display: table-cell;
   	vertical-align: middle;
-	flex-direction: column;
     text-align: center;
     border-right: 1px solid rgb(255,255,255);
-    width: 80px;
-    height: 90px;
 }
 
 .switch-day > *:nth-last-child(2){
@@ -157,28 +118,14 @@ ul li:last-child {
 }
 
 i {
+  margin-top: 5%;
   border: solid white;
   border-width: 0 3px 3px 0;
   display: block;
   padding: 5px;
   border-radius: 3px;
   height: 0.9px;
-}
-
-ul i:first-child {
-	margin-right: 3%;
-}
-
-ul i:last-child {
-	margin-left: 3%;
-}
-
-
-
-hr {
-	display: none;
-	height: 5.5em;
-	margin: 0 1% 0 1%;
+  width: 0.9px;
 }
 
 .next {
