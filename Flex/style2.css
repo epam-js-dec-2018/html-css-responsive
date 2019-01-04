@@ -106,13 +106,30 @@
     }
     .column__stripe_place{
         border-radius: 0;
+        line-height: 2;
     }
     .column_city{
         border-top-right-radius: 5px;
     }
     .column__picture{
-        width: 50px;
+        width: 100px;
         padding: 2vh;
         overflow: visible;
+    }
+    .column__plate{
+        padding-top: 10px;
+    }
+}
+@media (max-width: 900px) and (orientation: landscape){
+    .column{
+        min-height: 80vh;
+    }
+    .column__stripe{
+        line-height: 2;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px){
+    .column{
+        min-height: 40vh;
     }
 }

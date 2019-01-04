@@ -18,7 +18,7 @@
 .body_display{
     display: grid;
     grid-template-rows: auto [box]auto auto;
-    grid-template-columns: 27% [box]auto 27%;
+    grid-template-columns: auto [box]600px auto;
 
 }
 .box{
@@ -34,11 +34,10 @@
     grid-template-columns: 50% 50%;
 }
 .column{
-    min-width: 20vw;
     display: grid;
 }
 .column_city{
-    background: url("images/tokyo.png") no-repeat;
+    background: url("images/tokyo2.png") no-repeat;
     background-size: cover;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -72,11 +71,12 @@
     align-content: center;
 }
 .column__item_degrees{
-    font-size: 10vmin;
+    font-size: 6em;
     grid-area: degrees;
     align-self: center;
 }
 .column__item_graph{
+    padding-top: 10%;
     grid-area: graph;
     border-top: 1px solid #771921;
     border-bottom: 1px solid #771921;
@@ -108,6 +108,17 @@
     }
     .column__item_graph img{
         height: 50px;
+    }
+    .column__item_degrees{
+        font-size: 4em;
+    }
+    .column__item_place{
+        border-bottom-left-radius: 0;
+    }
+}
+@media (max-width: 900px) and (orientation: landscape){
+    .column__item_graph{
+        padding-top: 0;
     }
 }
 
