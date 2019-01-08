@@ -1,0 +1,121 @@
+@font-face {
+	font-family: "AvenirNext Bold";
+	src: url('fonts/AvenirNext-Bold.ttf');
+}
+/*ie*/
+@font-face {
+	font-family: "AvenirNext Bold";
+	src: local("AvenirNext Bold"), url(fonts/AvenirNext-Bold.woff);
+}
+ main, .forecast-block {
+	box-sizing: border-box;
+}
+.forecast-blocks {
+	padding: 96px 94px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.main-container {
+	margin: auto;
+	background-image: url(../Images/background.png);
+	background-position: center;
+	background-size: auto;	
+	height: 600px;
+	width: 800px;	
+	text-transform: uppercase;	
+}
+ .forecast-block {
+	display: block;
+	margin: 0;
+	width: 204px;
+	height: 204px;
+	background-color: #06B3DB;	
+	text-align: center;
+	border: 1px outset rgba(0, 0, 0, 0.17);
+}
+#chicago {
+	background-color: #06B3DB;
+}
+ #seattle {
+	background-color: #4ed486;
+}
+#brooklyn {
+	background-color: #6139f6;
+}
+#portland {
+	background-color: #e3b63d;
+}
+#weather-report-for-the-week {
+	background-color: #dc3d66;	
+}
+#san-jose {
+	background-color: #bd54cd;
+}
+.forecast-block-title {
+	font-family: "AvenirNext Bold", Arial;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+}
+
+.row1 .weather-icon {
+	padding-top: 46px;
+	height: 75px;
+}
+.row2 .weather-icon {
+	padding-top: 40px;
+	height: 89px;
+}
+.row3 .weather-icon {
+	padding-top: 22px;
+	height: 83px;
+}
+.row1 .forecast-block-title {
+	margin-top: 28px;	
+}
+.row2 .forecast-block-title {
+	margin-top: 26px;	
+}
+
+.day-forecast-container {
+	width: 100%;
+	height: 97px;
+	background-color: #bd3559;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.day-forecast {
+	width: 41px;
+	height: 61px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;	
+}
+
+.day-title {
+	font-family: "AvenirNext Bold", Arial;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 12px;	
+}
+.weather-small-icon img {
+	width: 23px;
+	height: 21px;	
+}
+.weather-small-icon {
+	width: 100%;
+	height: 24px;	
+}
+
+.day-temperature {
+	font-family: "AvenirNext Bold", Arial;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 12px;	
+} 
