@@ -1,112 +1,115 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    background: #1b2d3c;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #1b2d3c;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 h4 {
-    font-weight: 100;
-    padding:0;
-    margin:5px 0;
+  font-weight: 100;
+  padding: 0;
+  margin: 5px 0;
 }
 
 button {
-    background:none;
-    border:none;
-    color:#fff;
+  background: none;
+  border: none;
+  color: #fff;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .main-component {
-    margin: auto;
-    max-width: 696px;
-    transform: translate(0%, 50%);
-    min-height: 435px;
-    background-image:url('img/paris.png');
+  margin: auto;
+  max-width: 696px;
+  transform: translate(0%, 50%);
+  min-height: 435px;
+  background-image: url("img/paris.png");
 }
 .weather {
-    display: block;
-    float:right;
-    margin: 20px 20px 0 0;
+  display: block;
+  float: right;
+  margin: 20px 20px 0 0;
 }
 
 .date {
-    float: left;
-    margin-top: 27px;
+  float: left;
+  margin-top: 27px;
 }
 
 .detail-weather {
-    float:left;
+  float: left;
 }
 
 .days-info {
-    float:left;
+  float: left;
 }
 
 #switch {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
 }
 
 .switch-btn {
-    float:left;
-    position: relative;
-    top:38px;
+  float: left;
+  position: relative;
+  top: 38px;
 }
 
 li {
-    text-align: center;
-    margin: 0 20px;
+  text-align: center;
+  margin: 0 20px;
 }
 
 .day-switch {
-    margin: 0 0 0 19%;
+  margin: 0 auto;
+  max-width: 696px;
+  width: 419px;
 }
 
 .day {
-    font-size: 2.1em;
+  font-size: 2.1em;
 }
 
 .grade {
-    font-size: 5.5em;
-    font-weight: 900;
-    text-align:left;
+  font-size: 5.5em;
+  font-weight: 900;
+  text-align: left;
 }
 
 .city {
-    font-size: 1.5em;
-    font-weight: 100;
-    text-align:left;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: left;
 }
 
 .wind {
-    text-align:left;
+  text-align: left;
 }
 
 .vertical-line {
-    height: 72.2px;
-    border-right: 1px solid rgba(255,255,255,0.3);
-    margin-top: 0.7em;
-    position: absolute;
+  height: 72.2px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.7em;
+  position: absolute;
 }
