@@ -10,30 +10,23 @@
  main, .forecast-block {
 	box-sizing: border-box;
 }
-.forecast-blocks {
-	padding: 96px 94px;
+.forecast-blocks {	
 	display: grid;
 	display: -ms-grid;	
-	grid-template-columns: 204px 204px 204px;
-	grid-template-rows: 204px 204px;
-	-ms-grid-columns: 204px 204px 204px;
-  	-ms-grid-rows: 204px 204px;
 }
 
 .main-container {
 	margin: auto;
 	background-image: url(../Images/background.png);
 	background-position: center;
-	background-size: auto;	
-	height: 600px;
-	width: 800px;
-	overflow: hidden;
+	background-size: cover;	
+	height: auto;
+	width: 90%;	
 	text-transform: uppercase;	
 }
  .forecast-block {
 	display: block;
-	margin: 0;
-	width: 204px;
+	margin: 0;	
 	height: 204px;
 	background-color: #06B3DB;	
 	text-align: center;
@@ -61,7 +54,7 @@
   	-ms-grid-column: 1;
 }
 #weather-report-for-the-week {
-	background-color: #dc3d66;
+	background-color: #bd3559;
 	-ms-grid-row: 2;
   	-ms-grid-column: 2;	
 }
@@ -89,6 +82,7 @@
 .row3 .weather-icon {
 	padding-top: 22px;
 	height: 83px;
+	background-color: #dc3d66;
 }
 .row1 .forecast-block-title {
 	margin-top: 28px;	
@@ -129,7 +123,8 @@
 		padding-top: 18px;		
 	}
 	.day-forecast-container {
-		padding-left: 19px;		
+		width: 164px;
+		margin: 0 auto;		
 	}
    }
 
@@ -159,3 +154,91 @@
 	color: #ffffff;
 	font-size: 12px;	
 } 
+
+@media screen and (min-width: 799px) {	
+	.forecast-blocks {		
+		padding-bottom: 50px;
+		padding-top: 50px;
+		grid-template-columns: 11.75% 25.5% 25.5% 25.5%;
+		grid-template-rows: 204px 204px;
+		-ms-grid-columns: 11.75% 25.5% 25.5% 25.5%;
+		-ms-grid-rows: 204px 204px;		  
+	}
+	#chicago {
+		grid-column: 2;		
+		-ms-grid-row: 1;
+		-ms-grid-column: 2;
+	}
+	 #seattle {	
+		grid-column: 3;		
+		-ms-grid-row: 1;
+		-ms-grid-column: 3;
+	}
+	#brooklyn {	
+		grid-column: 4;		
+		-ms-grid-row: 1;
+		-ms-grid-column: 4;
+	}
+	#portland {		
+		grid-column: 2;	
+		-ms-grid-row: 2;
+		-ms-grid-column: 2;
+	}
+	#weather-report-for-the-week {	
+		grid-column: 3;		
+		-ms-grid-row: 2;
+		-ms-grid-column: 3;	
+	}
+	#san-jose {	
+		grid-column: 4;		
+		-ms-grid-row: 2;
+		-ms-grid-column: 4;
+	}	
+  }
+  @media screen and (min-width: 576px) and (max-width: 799px) {
+	.forecast-blocks {
+		grid-template-columns: 33.3% 33.3% 33.3%;
+		grid-template-rows: 204px 204px;
+		-ms-grid-columns: 33.3% 33.3% 33.3%;
+  		-ms-grid-rows: 204px 204px;
+	}
+	.main-container {
+		width: 100%;
+	}
+  }
+  @media screen and (max-width: 576px) {
+	.forecast-blocks {
+		grid-template-columns: 100%;
+		grid-template-rows: 204px 204px;
+		-ms-grid-columns: 100%;
+  		-ms-grid-rows: 204px 204px;
+	}
+	.main-container {
+		width: 100%;
+	}
+
+	#chicago {				
+		-ms-grid-row: 1;
+		-ms-grid-column: 1;
+	}
+	 #seattle {			
+		-ms-grid-row: 2;
+		-ms-grid-column: 1;
+	}
+	#brooklyn {				
+		-ms-grid-row: 3;
+		-ms-grid-column: 1;
+	}
+	#portland {		
+		-ms-grid-row: 4;
+		-ms-grid-column: 1;
+	}
+	#weather-report-for-the-week {	
+		-ms-grid-row: 5;
+		-ms-grid-column: 1;	
+	}
+	#san-jose {				
+		-ms-grid-row: 6;
+		-ms-grid-column: 1;
+	}
+  }

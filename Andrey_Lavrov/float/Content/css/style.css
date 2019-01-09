@@ -10,24 +10,22 @@
  main, .forecast-block {
 	box-sizing: border-box;
 }
-.forecast-blocks {
-	padding: 96px 94px;
+.forecast-blocks {	
+	overflow: hidden;
 }
 
 .main-container {
 	margin: auto;
 	background-image: url(../Images/background.png);
 	background-position: center;
-	background-size: auto;	
-	height: 600px;
-	width: 800px;
-	overflow: hidden;
-	text-transform: uppercase;	
+	background-size: cover;	
+	height: auto;
+	width: 90%;	
+	text-transform: uppercase;			
 }
  .forecast-block {
 	display: block;
-	margin: 0;
-	width: 204px;
+	margin: 0;	
 	height: 204px;
 	background-color: #06B3DB;
 	float: left;
@@ -47,7 +45,7 @@
 	background-color: #e3b63d;
 }
 #weather-report-for-the-week {
-	background-color: #dc3d66;	
+	background-color: #bd3559;		
 }
 #san-jose {
 	background-color: #bd54cd;
@@ -71,6 +69,7 @@
 .row3 .weather-icon {
 	padding-top: 22px;
 	height: 83px;
+	background-color: #dc3d66;
 }
 .row1 .forecast-block-title {
 	margin-top: 28px;	
@@ -80,10 +79,9 @@
 }
 
 .day-forecast-container {
-	width: 100%;
-	height: 97px;
-	background-color: #bd3559;		
-	padding-left: 19px;
+	display: inline-block;
+	margin: 0 auto;
+	height: 97px;		
 }
 
 .day-forecast {
@@ -114,3 +112,32 @@
 	color: #ffffff;
 	font-size: 12px;	
 } 
+
+@media screen and (min-width: 799px) {
+	.forecast-block {
+	  width: 25.5%;	  	  
+	}
+	.forecast-block:nth-child(3n+1) {
+		margin-left: 11.75%;
+	}
+	.forecast-blocks {
+		padding-bottom: 50px;
+		padding-top: 50px;			
+	}
+  }
+  @media screen and (min-width: 576px) and (max-width: 799px) {
+	.forecast-block {
+	  width: 33.3%;
+	}
+	.main-container {
+		width: 100%;
+	}
+  }
+  @media screen and (max-width: 576px) {
+	.forecast-block {
+	  width: 100%;
+	}
+	.main-container {
+		width: 100%;
+	}
+  }
