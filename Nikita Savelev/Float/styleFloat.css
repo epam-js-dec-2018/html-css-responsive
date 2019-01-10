@@ -1,0 +1,144 @@
+html {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+	background: bisque;
+	background-size: cover;
+	text-align: center;
+}
+
+.weather-widget-container {
+	background: white;
+	position: absolute;
+	width: 45%;
+	top: 50%;
+	margin-left: 27%;
+	transform: translateY(-50%);
+}
+
+.weather-widget {
+	min-width: 15vw;
+}
+
+.left_sec {
+	background-color: white;
+	background-image: url(pics/tokyo.jpeg);
+	background-size: cover;
+	font-weight: 500;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.right_sec {
+	background-color: white;
+	font-weight: 700;
+	color: #771C21;
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+
+.weather-widget-icon {
+	height: 50%;
+	position: relative;
+}
+
+.weather-widget-icon img {
+	margin: 10%;
+	height: 20vh;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.weather-widget-forecast {
+	font-size: 7vh;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.50);
+	align-content: center;
+	line-height: 3;
+}
+
+.weather-widget-calendar {
+	font-size: 3vh;
+	color: white;
+	background-color: rgba(255, 0, 0, 0.50);
+	align-content: center;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.temperature {
+	font-size: 10vmin;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+.graph img {
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	border-top: 1px solid #771C21;
+	border-bottom: 1px solid #771C21;
+}
+
+.graph {
+	padding-bottom: 7%;
+}
+
+.future_weather {
+	height: 20vh;
+	width: 70%;
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+}
+
+.row {
+	align-items: center;
+	color: #771C21;
+}
+
+.future_weather_days {
+	float: left;
+	width: 26%;
+	margin-left: 7%;
+}
+
+@media (max-width: 620px) {
+	.weather-widget-container{
+        width: 70%;
+        margin: 15%;
+	}
+	.weather-widget {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+    img{
+        height: 40%;
+    }
+    .weather-widget-container{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .future_weather_days{
+        height: 15vh;
+	}
+	.graph {
+		padding: 0;
+	}
+	.future_weather {
+		font-size: 2.5vh;
+	}
+}
