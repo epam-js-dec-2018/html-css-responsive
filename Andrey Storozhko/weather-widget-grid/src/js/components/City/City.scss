@@ -1,3 +1,5 @@
+@import '../../../scss/mixins';
+
 .city {
   display: -ms-grid;
   display: grid;
@@ -27,12 +29,24 @@
     -ms-grid-column-align: center;
     -ms-grid-row-align: end;
     align-self: end;
+    @include tablets(){
+      font-size: 80px;
+    }
+    @include phones(){
+      font-size: 60px;
+    }
     &--is-open{
       color: white;
       font-size: 40px;
       -ms-grid-row-align: center;
       -ms-grid-column-align: center;
       justify-self: center;
+      @include tablets(){
+        font-size: 60px;
+      }
+      @include phones(){
+        font-size: 40px;
+      }
     }
   }
   &__main{
@@ -42,6 +56,12 @@
     -ms-grid-column-align: center;
     font-size: 0.9rem;
     color: white;
+    @include tablets(){
+      font-size: 1.5rem;
+    }
+    @include phones(){
+      font-size: 0.9rem;
+    }
     &--is-hidden{
       display: none;
     }

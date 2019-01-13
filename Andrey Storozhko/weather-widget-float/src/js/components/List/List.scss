@@ -35,16 +35,40 @@
     display: block;
     font-size: 0.75rem;
     text-align: center;
+    @include tablets(){
+      font-size: 1.2rem;
+    }
+    @include phones(){
+      font-size: 0.75rem;
+    }
   }
   &__name{
     padding-bottom: 10px;
+    @include tablets(){
+      padding-bottom: 20px;
+    }
+    @include phones(){
+      padding-bottom: 10px;
+    }
   }
   &__temp{
     padding-top: 10px;
+    @include tablets(){
+      padding-top: 20px;
+    }
+    @include phones(){
+      padding-top: 10px;
+    }
   }
   &__weather{
     display: block!important;
     text-align: center;
     font-size: 15px;
+    @include tablets(){
+      font-size: 25px;
+    }
+    @include phones(){
+      font-size: 15px;
+    }
   }
 }

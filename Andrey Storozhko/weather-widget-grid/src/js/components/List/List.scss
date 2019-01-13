@@ -60,6 +60,12 @@
   }
   &__name,&__temp {
     font-size: 0.75rem;
+    @include tablets(){
+      font-size: 1.2rem;
+    }
+    @include phones(){
+      font-size: 0.75rem;
+    }
   }
   &__weather{
     font-size: 15px;
@@ -67,5 +73,11 @@
     -ms-grid-column: 1;
     -ms-grid-column-align: center;
     -ms-grid-row-align: center;
+    @include tablets(){
+      font-size: 25px;
+    }
+    @include phones(){
+      font-size: 15px;
+    }
   }
 }

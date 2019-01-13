@@ -1,3 +1,5 @@
+@import '../../../scss/mixins';
+
 .city {
   display: block;
   position: absolute;
@@ -21,6 +23,14 @@
     font-size: 60px;
     padding-top: 45px;
     text-align: center;
+    @include tablets(){
+      font-size: 80px;
+      padding-top: 65px;
+    }
+    @include phones(){
+      font-size: 60px;
+      padding-top: 45px;
+    }
     &--is-open{
       display: block!important;
       position: absolute;
@@ -30,6 +40,12 @@
       transform: translate(-50%, -50%);
       color: white;
       font-size: 40px;
+      @include tablets(){
+        font-size: 60px;
+      }
+      @include phones(){
+        font-size: 40px;
+      }
     }
   }
   &__main{
@@ -37,6 +53,14 @@
     color: white;
     padding-top: 45px;
     text-align: center;
+    @include tablets(){
+      font-size: 1.5rem;
+      padding-top: 65px;
+    }
+    @include phones(){
+      font-size: 0.9rem;
+      padding-top: 45px;
+    }
     &--is-hidden{
       display: none;
     }
