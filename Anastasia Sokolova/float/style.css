@@ -1,128 +1,125 @@
-html, body, main   {
-    margin: 0;
-    background: #4e5860;
-    font-size: 18px;
+html,
+body,
+main {
+  margin: 0;
+  background: #4e5860;
+  font-size: 18px;
 }
 
 .widget {
-    margin: 80px auto;
-    width: 30%;
-    height: 400px;
-  
+  margin: 80px auto;
+  width: 30%;
+  height: 400px;
 }
 .clearfix:after {
-	content: ".";
-	visibility: hidden;
-	display: block;
-	height: 0;
-    clear: both;
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 .rect_top {
-    height: 70%;
-    background: aliceblue;
-    box-shadow: 0px -6px 3px 0px rgb(240, 248, 255);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    clear:both
+  height: 70%;
+  background: aliceblue;
+  box-shadow: 0px -6px 3px 0px rgb(240, 248, 255);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  clear: both;
 }
 
-.rect_btm {  
-    background: #2e3335;
-    box-shadow: 0px 7px 14px 5px rgb(41, 46, 48);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px; 
-    height: 25%;
- 
+.rect_btm {
+  background: #2e3335;
+  box-shadow: 0px 7px 14px 5px rgb(41, 46, 48);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 25%;
 }
 
 .refresh {
-    margin: 5px;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    float: right;
+  margin: 5px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  float: right;
 }
 
 .cloud {
-    position: relative;
-    left: 35%;
-    margin: 35px 0px;
- }
+  position: relative;
+  left: 35%;
+  margin: 35px 0px;
+}
 
 .degree {
-    font:  4.58em 'Source Sans Pro';
-    color: #8d9396;
-    position: relative;
-    left: 2%;
-    float: left;
- }
- .degree::after {
-    content: 'o';
-    position: absolute;
-    right: -15px;
-    top: 5px;
-    font-size: 0.45em;  
+  font: 4.58em "Source Sans Pro";
+  color: #8d9396;
+  position: relative;
+  left: 2%;
+  float: left;
+}
+.degree::after {
+  content: "o";
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  font-size: 0.45em;
 }
 
 .data {
-    width: 15%;
-    height: 60px;
-    background: url(images/Rect_blue.png) ;  
-    text-align: center;
-    float: right;
+  width: 15%;
+  height: 60px;
+  background-color: #54bae6;
+  text-align: center;
+  float: right;
 }
 
-.text_data {  
-    font: 1em 'Open Sans', sans-serif ; 
-    line-height: 1;
-    color: aliceblue;
+.text_data {
+  font: 1em "Open Sans", sans-serif;
+  line-height: 1;
+  color: aliceblue;
 }
 
 .text_data > span {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .weather_city {
-    color: #8d9396; 
-    font: 1.667em 'Source Sans Pro', sans-serif;
-    line-height: 1;
-    position: absolute;
-    left: 43%;
-    width: 30%;
+  color: #8d9396;
+  font: 1.667em "Source Sans Pro", sans-serif;
+  line-height: 1;
+  position: absolute;
+  left: 43%;
+  width: 30%;
 }
 
 .weather_city > span {
-    font:  bold 0.8em 'Source Sans Pro', sans-serif;
+  font: bold 0.8em "Source Sans Pro", sans-serif;
 }
 
-
 .stats {
-    width: 70%;
-    float: right;
-    font: 0.833em 'Lato'; 
-    color: aliceblue;   
+  width: 70%;
+  float: right;
+  font: 0.833em "Lato";
+  color: aliceblue;
 }
 
 .stat_item {
-    float: left;
-    margin: 20px 10px ;
-} 
-
-.stat_item > img  {
-     margin: 0px 5px -5px 0px;
-}  
-.scroller {
-    width: 50%;
-    float: right;
+  float: left;
+  margin: 20px 10px;
 }
 
-  
-@media screen and ( max-width: 570px) 
- { 
-  .widget { 
-   margin: 0;
-   width: 100%;
-   font-size: 10px;
+.stat_item > img {
+  margin: 0px 5px -5px 0px;
+}
+.scroller {
+  width: 50%;
+  float: right;
+}
+
+@media screen and (max-width: 570px) {
+  .widget {
+    margin: 0;
+    width: 100%;
+    font-size: 10px;
   }
   .weather_city {
     left: 30%;
@@ -131,26 +128,23 @@ html, body, main   {
     width: 90%;
   }
   .stat_item {
-     margin: 20px 5px;
+    margin: 20px 5px;
   }
 }
 
-@media screen and (min-width: 571px)
-and (max-width: 864px) { 
-  .widget { 
-   width: 59%;
-   font-size: 14px;
+@media screen and (min-width: 571px) and (max-width: 864px) {
+  .widget {
+    width: 59%;
+    font-size: 14px;
   }
   .weather_city {
     left: 40%;
-  
   }
 }
 
-@media screen and (min-width: 864px)
-  and (max-width: 1400px) { 
-    .widget { 
-     width: 390px;
-     font-size: 16px;
-    }
+@media screen and (min-width: 864px) and (max-width: 1400px) {
+  .widget {
+    width: 390px;
+    font-size: 16px;
+  }
 }
