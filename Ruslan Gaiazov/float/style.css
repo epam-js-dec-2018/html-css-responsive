@@ -1,128 +1,133 @@
 @font-face {
-	font-family: "AvenirNext Bold";
-	src: url('fonts/avenir-next-bold.woff');
+  font-family: "AvenirNext Bold";
+  src: url("fonts/avenir-next-bold.woff");
 }
 
-main, .weather-big-section, .weather-of-the-week {
-	box-sizing: border-box;
+body {
+  margin: 0;
+}
+
+.wrapper,
+.weather-big-section,
+.weather-of-the-week {
+  box-sizing: border-box;
+}
+
+.forIE {
+  margin: auto;
+  width: 600px;
 }
 
 .wrapper {
-	margin: auto;
-}
-
-main {
-	margin: auto;
-	max-width: 799px;
-	min-height: 600px;
-	min-width: 204px;
-	background-image: url(img/background.png);
-	background-position: center;
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	padding: 100px 98px;
+  background-image: url("img/background.png");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  padding: 100px 0;
 }
 
 .weather-big-section {
-	width: 200px;
-	height: 200px;
-	display: block;
-	float: left;
-	margin: 0;
-	background-color: #06B3DB;
-	font-family: "AvenirNext Bold", Arial;
-	color: #ffffff;
-	border: 1px outset rgba(0, 0, 0, 0.17); 
-	text-transform: uppercase;
-	text-align: center;
+  width: 200px;
+  height: 200px;
+  display: block;
+  float: left;
+  margin: 0;
+  font-family: "AvenirNext Bold", Arial;
+  color: #ffffff;
+  border: 1px outset rgba(0, 0, 0, 0.17);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .section-one {
-	background-color: #06B3DB;
+  background-color: #06b3db;
 }
 .section-two {
-	background-color: #4ed486;
+  background-color: #4ed486;
 }
 .section-three {
-	background-color: #6139f6;
+  background-color: #6139f6;
 }
 .section-four {
-	background-color: #e3b63d;
+  background-color: #e3b63d;
 }
 .section-five {
-	background-color: #dc3d66;
+  background-color: #dc3d66;
 }
 .section-six {
-	background-color: #bd54cd;
+  background-color: #bd54cd;
 }
 
 .if-cloudy {
-	display: block;
-	padding: 25px 0 0 0;	
+  display: block;
+  padding: 25px 0 0 0;
 }
 
 .weather-icon {
-	display: block;
-	margin: 0 auto 28px auto;
-	padding: 30px 0 0 0;
+  display: block;
+  margin: 0 auto 28px auto;
+  padding: 30px 0 0 0;
 }
 
 .cities {
-	font-size: 16px;
-	margin: auto;
+  font-size: 16px;
+  margin: auto;
 }
 
 .weather-of-the-week {
-	width: 100%;
-	height: 92px;
-	background-color: #bd3559;
-	font-size: 12px;
+  width: 100%;
+  height: 92px;
+  background-color: #bd3559;
+  font-size: 12px;
 }
 
 .detail {
-	padding: 30px 0 10px 0;
-	margin: 0 auto;
+  padding: 30px 0 10px 0;
+  margin: 0 auto;
 }
 
 .weather-on-the-week {
-	font-size: 12px;
-	display: block;
-	float: left;
-	padding: 12px 0 0 10px;
-	margin: 0 12px 0 0;
-	text-align: center;
+  font-size: 12px;
+  display: block;
+  float: left;
+  padding: 12px 0 0 10px;
+  margin: 0 12px 0 0;
+  text-align: center;
 }
 
 .small {
-	height: 20px;
-	padding: 0;
-	margin: 10.25px auto;
+  height: 20px;
+  padding: 0;
+  margin: 10.25px auto;
 }
 
-@media (min-width: 612px) {
-	main {
-		padding: 96px 0;
-	}
-	.wrapper {
-		width: 612px;
-	}
+@media (min-width: 600px) {
+  .wrapper {
+    padding: 100px 0;
+  }
+  .forIE {
+    width: 600px;
+  }
 }
 
-@media (max-width: 611px) and (min-width: 408px) {
-	main {
-		padding: 0 0;
-	}
-	.wrapper {
-		width: 408px;
-	}
+@media (max-width: 599px) and (min-width: 400px) {
+  .wrapper {
+    padding: 0 0;
+  }
+  .forIE {
+    width: 400px;
+  }
 }
 
-@media (max-width: 407px) {
-	main {
-		padding: 0 0;
-	}
-	.wrapper {
-		width: 204px;
-	}
+@media (max-width: 399px) {
+  .wrapper {
+    padding: 0 0;
+  }
+  .forIE {
+    width: 200px;
+  }
 }
