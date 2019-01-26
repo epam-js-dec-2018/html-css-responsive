@@ -26,10 +26,6 @@ html {
   background-color: #4e5860;
   background-image: radial-gradient(at top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0) 50%);
 }
-
-@import "widget";
-//@import "widgetIE";
-
 @media screen and (max-width: 800px) {
   .weather {width: 100%;}
 }
@@ -37,3 +33,5 @@ html {
 @media screen and (max-height: 560px) {
   .weather {padding: 10px 0;}
 }
+
+@import "widget";

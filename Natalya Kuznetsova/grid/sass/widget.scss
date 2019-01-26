@@ -37,67 +37,65 @@
       height: auto;
     }
 
-    &__list {
+    .weather_info_list {
       display: grid;
       grid-template-columns: 25% 55% 20%;
       align-items: center;
       width: 100%;
       padding-top: 10%;
 
-      &__list_item {
+      &__list_item_gedree {
+        font-family: 'Proxima Nova Light', 'Open Sans', sans-serif;
+        font-size: 4.1rem;
+        font-weight: 300;
+        text-align: right;
+        color: #8d9396;
+      }
 
-        &__gedree {
-          font-family: 'Proxima Nova Light', 'Open Sans', sans-serif;
-          font-size: 4.1rem;
-          font-weight: 300;
-          text-align: right;
-          color: #8d9396;
-        }
+      &__list_item_city {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        padding-left: 5%;
+      }
 
-        &__city {
-          display: grid;
-          grid-template-rows: 50% 50%;
-          padding-left: 5%;
+      &__sky {
+        font-family: 'Source Sans Pro', 'Source Sans Pro Light',  sans-serif;
+        font-size: 1.71rem;
+        font-weight: 300;
+        text-align: left;
+        color: #bac2c6;
+      }
 
-          &__sky {
-            font-family: 'Source Sans Pro', 'Source Sans Pro Light',  sans-serif;
-            font-size: 1.71rem;
-            font-weight: 300;
-            text-align: left;
-            color: #bac2c6;
-          }
+      &__name {
+        align-self: end;
+        font-family: 'Source Sans Pro', 'Source Sans Pro Semibold', sans-serif;
+        font-size: 1.143rem;
+        font-weight: 600;
+        text-align: left;
+        color: #a2a9ad;
+      }
 
-          &__name {
-            font-family: 'Source Sans Pro', 'Source Sans Pro Semibold', sans-serif;
-            font-size: 1.143rem;
-            font-weight: 600;
-            text-align: left;
-            color: #a2a9ad;
-          }
-        }
+      &__list_item_date {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        height: 100%;
 
-        &__date {
-          display: grid;
-          grid-template-rows: 50% 50%;
-          height: 100%;
+        background-color: #54bae6;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #FFF;
+        text-transform: uppercase;
+        line-height: 22px;
+      }
 
-          background-color: #54bae6;
-          font-family: 'Open Sans', sans-serif;
-          font-size: 1rem;
-          font-weight: bold;
-          text-align: center;
-          color: #FFF;
-          text-transform: uppercase;
-          line-height: 22px;
+      &__month {
+        align-self: end;
+      }
 
-          &__month {
-            align-self: end;
-          }
-
-          &__day {
-            font-size: 1.286rem;
-          }
-        }
+      &__day {
+        font-size: 1.286rem;
       }
     }
   }
@@ -110,7 +108,7 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
-    &__params_list {
+    .weather_params_list {
       display: grid;
       grid-template-columns: 33.333% 33.333% 33.333%;
       justify-items: center;
@@ -128,18 +126,18 @@
         &:last-child {
           justify-self: start;
         }
+      }
 
-        &__wind_value, &__wet_value, &__sun_value {
-          padding-left: 20%;
-          font-family: 'Proxima Nova', sans-serif;
-          font-size: 1rem;
-          font-weight: bold;
-          color: #fff;
-        }
+      &__wind_value, &__wet_value, &__sun_value {
+        padding-left: 20%;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
       }
     }
 
-    &__params_pagination {
+    .weather_params_pagination {
       display: grid;
       grid-template-columns: 4% 4% 4%;
       justify-content: center;

@@ -12,14 +12,14 @@
     <article class="widget">
       <div class="weather_info">
         <img src="images/cloud.png" alt="cloudy sky">
-        <ul>
-          <li>79&deg;</li>
-          <li><span>Cloudy Skies</span><span>Sicklerville, New Jersey </span></li>
-          <li><span>May</span><span>21</span></li>
+        <ul class="weather_info_list">
+          <li class="degree">79&deg;</li>
+          <li class="city"><span class="info city_info">Cloudy Skies</span><span class="info city_info" id="city">Sicklerville, New Jersey </span></li>
+          <li class="date"><span class="info date_info">May</span><span class="info date_info" id="day">21</span></li>
         </ul>
       </div>
       <footer class="weather_params">
-        <ul>
+        <ul class="weather_params_list">
           <li>
             <img src="images/wind.png" alt="wind">
             <span>2MPH</span>
@@ -33,7 +33,7 @@
             <span>83%</span>
           </li>
         </ul>
-        <ul>
+        <ul class="weather_params_pagination">
           <li id="active"></li>
           <li></li>
           <li></li>

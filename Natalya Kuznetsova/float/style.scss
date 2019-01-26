@@ -17,6 +17,10 @@
 
 html {
   font-size: 14px;
+
+  @media screen and (max-width: 350px) {
+    font-size: 12px;
+  }
 }
 
 .weather {
@@ -25,6 +29,14 @@ html {
   max-width: 800px;
   background-color: #4e5860;
   background-image: radial-gradient(at top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0) 50%);
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+
+  @media screen and (max-height: 560px) {
+    padding: 10px 0;
+  }
 }
 
 @import "widget";
@@ -33,20 +45,4 @@ html {
   content: "";
   display: block;
   clear: both;
-}
-
-@media screen and (max-width: 800px) {
-  .weather {width: 100%;}
-}
-
-@media screen and (max-width: 390px) {
-  .widget {width: 100%;}
-}
-
-@media screen and (max-width: 350px) {
-  html {font-size: 12px;}
-}
-
-@media screen and (max-height: 560px) {
-  .weather {padding: 10px 0;}
 }
