@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Jersey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+</head>
+<body>
+
+    <article class="widget">
+
+        <img class="widget__img" src="../assets/mostly-cloudy.svg" alt="Mostly Cloudy" width="100">
+
+        <div class="widget__info clearfix">
+            <strong class="widget__temp" aria-label="Temperature">79<abbr title="degrees Fahrenheit">°</abbr></strong>
+            <header class="widget__header">
+                <p class="widget__description">Cloudy Skies</p>  
+                <h1 class="widget__title">Sicklerville, New Jersey</h1>
+                
+            </header>
+            <time class="widget__date" datetime="2018-05-21">May<br/>21</time>
+            
+        </div>
+        
+        <aside class="widget__details clearfix">
+
+            <dl class="widget__detail widget__detail--wind clearfix">
+                <dt>
+                    <img src="../assets/wind.svg" alt="Wind speed" width="30">
+                </dt>    
+                <dd>2 <abbr title="Miles per hour">MPH</abbr></dd>  
+            </dl>
+
+            <dl class="widget__detail widget__detail--humidity clearfix">
+                <dt>
+                    <img src="../assets/humidity.svg" alt="Humidity" width="30">
+                </dt>
+                <dd>33%</dd>
+            </dl>
+
+            <dl class="widget__detail widget__detail--sun clearfix">
+                <dt>
+                    <img src="../assets/sun.svg" alt="Sunshine duration" width="30">
+                </dt>
+                <dd>83%</dd>
+            </dl>
+  
+        </aside>
+
+        <div class="widget__controls clearfix">
+            <a href="#" class="widget__control widget__control--active"></a>
+            <a href="#" class="widget__control"></a>
+            <a href="#" class="widget__control"></a>
+        </div>
+
+        <button class="widget__refresh"><span>Refresh</span></button>
+
+    </article>
+
+</body>
+</html>
