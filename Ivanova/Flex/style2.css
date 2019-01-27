@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Dosis ExtraLight";
+    src: url("fonts/dosis-extralight.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+.body_background{
+    margin: 0;
+    padding: 0;
+    background: url("images/back.jpg") fixed center center no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+}
+.body_display{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    font-family: 'Dosis ExtraLight', arial, serif;
+    background: #ffffff;
+    box-shadow: 0 0 21px rgba(0,0,0,0.4) ;
+    -webkit-box-shadow: 0 0 21px rgba(0,0,0,0.4) ;
+    -moz-box-shadow: 0 0 21px rgba(0,0,0,0.4) ;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+}
+.column{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    min-width: 20vw;
+    min-height: 60vh;
+}
+.column_city{
+    background: url("images/tokyo.png") no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.column_info{
+    color: #771921;
+ }
+.column__item_margin{
+    margin: auto;
+}
+.column__block{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.column__stripe{
+    color: #ffffff;
+    height: 50%;
+    display: flex;
+}
+.column__stripe_weather{
+    font-size: 36px;
+    background-color: rgba(46, 28, 37, 0.9);
+}
+.column__stripe_place{
+    font-size: 22px;
+    background-color: rgba(119, 25, 33, 0.9);
+    border-bottom-left-radius: 5px;
+}
+.column__degrees{
+    font-size: 10vmin;
+}
+.column__block_row{
+    flex-direction: row;
+}
+.column__block_short{
+    width: 80%;
+}
+.column__graph{
+    width: 100%;
+}
+.column__plate{
+    margin: auto;
+    font-weight: 700;
+}
+.column__plate div{
+    margin-top: 1vh;
+}
+.column__block_border{
+    border-top: 1px solid #771921;
+}
+@media (max-width: 600px) {
+    .box{
+        flex-direction: column;
+    }
+    .column{
+        min-height: 50%;
+    }
+    .column_info{
+        padding: 2vh;
+    }
+    .column__stripe_place{
+        border-radius: 0;
+        line-height: 2;
+    }
+    .column_city{
+        border-top-right-radius: 5px;
+    }
+    .column__picture{
+        width: 100px;
+        padding: 2vh;
+        overflow: visible;
+    }
+    .column__plate{
+        padding-top: 10px;
+    }
+}
+@media (max-width: 900px) and (orientation: landscape){
+    .column{
+        min-height: 80vh;
+    }
+    .column__stripe{
+        line-height: 2;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px){
+    .column{
+        min-height: 40vh;
+    }
+}
