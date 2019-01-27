@@ -1,0 +1,95 @@
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Main";
+  src: url(../fonts/Avenir/AvenirLTStd-Black.otf); }
+@font-face {
+  font-family: "Avenir-Light";
+  src: url(../fonts/Avenir/AvenirLTStd-Light.otf); }
+body {
+  margin: 0; }
+
+.background {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.container {
+  width: 615px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(45%);
+}
+
+.block {
+  float: left;
+  width: 205px;
+  height: 205px;
+  text-align: center;
+  font-family: 'Avenir-Main', 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 800;
+  color: white; }
+  .block img {
+    width: 90px;
+    height: 80px;
+    margin-top: 40px; }
+  .block_first {
+    background-color: #06b3db; }
+  .block_second {
+    background-color: #4ed486; }
+  .block_third {
+    background-color: #6139f6; }
+  .block_fourth {
+    background-color: #e3b63d; }
+    .block_fourth img {
+      width: 86px;
+      height: 89px;
+      margin-top: 30px; }
+  .block_fifth {
+    background-color: #dc3d66;
+    position: relative; }
+    .block_fifth_top {
+      height: 50%; }
+      .block_fifth_top img {
+        height: 63px;
+        width: 65px;
+        margin-top: 25px; }
+    .block_fifth_bottom {
+      height: 50%;
+      background-color: #bd3559; }
+  .block_sixth {
+    position: relative;
+    background-color: #bd54cd; }
+    .block_sixth img {
+      width: 88px;
+      height: 65px;
+      margin-top: 55px; }
+  .block-small {
+    float: left;
+    width: 30px;
+    padding-left: 18px;
+    font-family: 'Avenir-Light', 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 400; }
+    .block-small img {
+      width: 23px;
+      height: 20px;
+      margin: 0; }
+
+.clearfix {
+  clear: both; }
+
+.row::after {
+  content: '';
+  clear: both;
+  display: block; }
+
+/*# sourceMappingURL=main.css.map */
