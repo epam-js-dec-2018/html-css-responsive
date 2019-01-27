@@ -1,0 +1,143 @@
+html,
+body,
+main {
+  margin: 0;
+  background: #4e5860;
+  font-size: 16px;
+}
+
+.widget {
+  margin: auto;
+  padding: 80px;
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.rect_top {
+  height: 70%;
+  background: aliceblue;
+  box-shadow: 0px -6px 3px 0px rgb(240, 248, 255);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.refresh {
+  align-self: flex-end;
+  margin: 5px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.cloud {
+  align-self: center;
+}
+
+.degree {
+  font: 4.58em "Source Sans Pro";
+  color: #8d9396;
+  position: relative;
+  left: 2%;
+}
+.degree::after {
+  content: "o";
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  font-size: 0.45em;
+}
+
+.weather_city {
+  color: #8d9396;
+  font: 1.667em "Source Sans Pro", sans-serif;
+  line-height: 1;
+  margin-left: 15px;
+}
+
+.weather_city > span {
+  font: bold 0.8em "Source Sans Pro", sans-serif;
+}
+
+.data {
+  width: 15%;
+  height: 60px;
+  background-color: #54bae6;
+  text-align: center;
+}
+
+.text_data {
+  font: 1em "Open Sans", sans-serif;
+  line-height: 1;
+  color: aliceblue;
+}
+
+.text_data > span {
+  font-size: 1.5em;
+}
+
+.rect_btm {
+  background: #2e3335;
+  box-shadow: 0px 7px 14px 5px rgb(41, 46, 48);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25%;
+  justify-content: space-around;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-around;
+  font: 0.833em "Lato";
+  color: aliceblue;
+}
+
+.stat_item > img {
+  margin: 0px 5px -5px 0px;
+}
+
+@media screen and (max-width: 566px) {
+  .widget {
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 567px) and (max-width: 860px) {
+  .widget {
+    padding: 80px;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 860px) and (max-width: 1200px) {
+  .widget {
+    padding: 80px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  .widget {
+    padding: 80px;
+    width: 30%;
+    height: 550px;
+    font-size: 18px;
+  }
+}
