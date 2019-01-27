@@ -1,0 +1,83 @@
+@import '../../../scss/mixins';
+
+.days__list {
+  color: #ffffff;
+  height: 50%;
+  background-color: rgba(44, 54, 39, 0.3);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 4fr 4fr 4fr;
+  -ms-grid-rows: 100%;
+  grid-template-columns: repeat(4, 4fr);
+  align-items: center;
+  &:hover{
+    cursor: default;
+  }
+}
+
+.day {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 10px;
+  &:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &:nth-child(3){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &:nth-child(4){
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &__name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &__temp {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+  }
+  &__name,&__temp {
+    font-size: 0.75rem;
+    @include tablets(){
+      font-size: 1.2rem;
+    }
+    @include phones(){
+      font-size: 0.75rem;
+    }
+  }
+  &__weather{
+    font-size: 15px;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    @include tablets(){
+      font-size: 25px;
+    }
+    @include phones(){
+      font-size: 15px;
+    }
+  }
+}
