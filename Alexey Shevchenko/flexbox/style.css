@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700,900');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    /* For old browsers */
+    background: #162938;
+    background: radial-gradient(circle at 50% 0px, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 60%, #182a38 100%), linear-gradient(to bottom, #2f4151 0%, #162837 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.weather-widget {
+    background-image: url("img/Paris.png");
+    background-repeat: no-repeat;
+}
+
+/* --- Header --- */
+.main-section {
+    /*font-weight: 300;*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-section-date > span:first-child {
+    font-size: 1.875em;
+}
+
+.main-section-date > span:last-child {
+    font-size: 0.875em;
+}
+
+.main-section-weather {
+    display: flex;
+}
+
+.main-section-weather > span:first-child {
+    display: flex;
+}
+
+.main-section-weather > span:first-child > strong:first-child, .main-section-weather > span:first-child > strong:last-child {
+    font-weight: 900;
+}
+
+.main-section-weather > span:last-child > strong:nth-child(2), .main-section-weather > span:last-child > strong:last-child {
+    font-weight: 700;
+}
+
+/* --- Footer --- */
+.weekly-section {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weekly-section > ul {
+    width: 100%;
+    display: flex;
+    font-weight: 300;
+    margin: 0;
+}
+
+.weekly-section > ul > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+}
+
+.divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.next {
+    transform: rotate(180deg);
+}
+
+/* ----------- Laptops and large screens ----------- */
+@media (min-width: 1200px) {
+    .weather-widget {
+        background-size: cover;
+        background-position: center;
+        margin-top: 69px;
+        width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* --- Header --- */
+    .main-section {
+        margin: 15vh 10vw 0 0;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .main-section-date {
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-section-date > span:first-child {
+        font-size: 3.75em;
+    }
+
+    .main-section-date > span:last-child {
+        font-size: 1.75em;
+    }
+
+    .main-section-weather {
+        flex-direction: column;
+    }
+
+    .main-section-weather > span:first-child > strong:first-child {
+        font-size: 11.57em;
+        line-height: 170px;
+        margin-right: 25px;
+    }
+
+    .main-section-weather > span:first-child > strong:last-child {
+        font-size: 5.785em;
+        line-height: 55px;
+    }
+
+    .main-section-weather > span:nth-child(2) {
+        margin: 0 0 25px 10px;
+        font-size: 2.8925em;
+    }
+
+    .main-section-weather > span:last-child {
+        margin-left: 10px;
+    }
+
+    .main-section-weather > span:last-child > object {
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    .main-section-weather > span:last-child > strong:nth-child(2) {
+        font-size: 3.668em;
+        margin-right: 15px;
+    }
+
+    .main-section-weather > span:last-child > strong:last-child {
+        font-size: 1.622em;
+        line-height: 100px;
+    }
+
+    /* --- Footer --- */
+    .weekly-section {
+        align-self: flex-end;
+        width: 100%;
+        height: 25%;
+        padding: 0 8%;
+        min-height: 108px;
+    }
+
+    .weekly-section > img {
+        width: 2.5%;
+    }
+
+    .weekly-section > ul {
+        justify-content: space-between;
+        font-size: 30.88px;
+        padding: 0 10vw;
+        height: 100%;
+    }
+
+    .weekly-section > ul > li {
+        margin: 2vh 0;
+    }
+
+    .weekly-section > ul > li > object {
+        width: 70%;
+    }
+
+    .weekly-section > ul > li > span > sup {
+        font-size: 25px;
+    }
+
+    .divider {
+        height: 80%;
+        display: flex;
+        align-self: center;
+    }
+
+}
+
+/* ----------- Large phones, tablets ----------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .weather-widget {
+        margin-top: 69px;
+        width: 696px;
+        height: 435px;
+
+    }
+
+    /* --- Header --- */
+    .main-section {
+        margin: 78px 78px 0 0;
+    }
+
+    .main-section-date {
+        margin-right: 25px;
+        width: 81px;
+    }
+
+    .main-section-weather {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 150px;
+    }
+
+    .main-section-weather > span:first-child > strong:first-child {
+        font-size: 92.42px;
+        line-height: 84px;
+        margin-right: 11px;
+    }
+
+    .main-section-weather > span:first-child > strong:last-child {
+        font-size: 44.48px;
+        line-height: 27px;
+    }
+
+    .main-section-weather > span:nth-child(2) {
+        margin: 0 0 20px 0;
+        font-size: 22.24px;
+    }
+
+    .main-section-weather > span:last-child > strong:nth-child(2) {
+        font-size: 29.35px;
+        margin-right: 5px;
+        padding-left: 10px;
+
+    }
+
+    .main-section-weather > span:last-child > strong:last-child {
+        font-size: 12.97px;
+    }
+
+    /* --- Footer --- */
+    .weekly-section {
+        margin-top: 83px;
+        height: 108px;
+        padding: 0 67px 0 59px;
+    }
+
+    .weekly-section > ul {
+        justify-content: center;
+        font-size: 15.44px;
+        padding: 0;
+    }
+
+    .weekly-section > ul > li {
+        margin: 0 30px;
+    }
+
+    .weekly-section > ul > li > span > sup {
+        font-size: 7.72px;
+    }
+
+    .divider {
+        height: 81px;
+    }
+
+}
+
+/* ----------- Phones and small tablets ----------- */
+@media (max-width: 767px) {
+    .weather-widget {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+
+    }
+
+    /* --- Header --- */
+    .main-section {
+        margin: 15vh 10vw 0 0;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .main-section-date {
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-section-weather {
+        flex-direction: column;
+    }
+
+    .main-section-weather > span:first-child > strong:first-child {
+        font-size: 5.785em;
+        line-height: 90px;
+        margin-right: 15px;
+    }
+
+    .main-section-weather > span:first-child > strong:last-child {
+        font-size: 2.8925em;
+        line-height: 25px;
+    }
+
+    .main-section-weather > span:nth-child(2) {
+        margin: 0 0 15px 10px;
+        font-size: 1.44625em;
+    }
+
+    .main-section-weather > span:last-child {
+        margin-left: 10px;
+    }
+
+    .main-section-weather > span:last-child > object {
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .main-section-weather > span:last-child > strong:nth-child(2) {
+        font-size: 1.834em;
+        margin-right: 5px;
+    }
+
+    .main-section-weather > span:last-child > strong:last-child {
+        font-size: 0.811em;
+    }
+
+    /* --- Footer --- */
+    .weekly-section {
+        align-self: flex-end;
+        width: 100%;
+        height: 25%;
+        padding: 0 8%;
+        min-height: 108px;
+    }
+
+    .weekly-section > img {
+        width: 2.5%;
+    }
+
+    .weekly-section > ul {
+        justify-content: space-between;
+        font-size: 15.44px;
+        padding: 0 5vw;
+        height: 100%;
+    }
+
+    .weekly-section > ul > li {
+        margin: 2vh 0;
+    }
+
+    .weekly-section > ul > li > object {
+        width: 40px;
+    }
+
+    .weekly-section > ul > li > span > sup {
+        font-size: 12.5px;
+    }
+
+    .divider {
+        height: 80%;
+        display: flex;
+        align-self: center;
+    }
+
+}
