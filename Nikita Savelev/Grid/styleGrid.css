@@ -1,0 +1,145 @@
+html {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+	background-color: bisque;
+	background-size: cover;
+	text-align: center;
+}
+
+.weather-widget-main {
+	transform: translateY(15%);
+	display: grid;
+	grid-template-rows: auto [box]auto auto;
+	grid-template-columns: auto [box]650px auto;
+}
+
+.weather-widget-container {
+	grid-area: box;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.weather-widget {
+	display: grid;
+}
+
+.left_sec {
+	background-color: white;
+	background-image: url(pics/tokyo.jpeg);
+	background-size: cover;
+	font-weight: 500;
+	grid-template-areas: "icon" "info" "calendar";
+}
+
+.right_sec {
+	background-color: white;
+	border-left-style: solid;
+	border-width: 1px;
+	font-weight: 700;
+	color: #771C21;
+	display: grid;
+	justify-content: center;
+	grid-template-rows: [temperature]25% [graph]25% [future_weather]50%;
+}
+
+.weather-widget-icon {
+	display: grid;
+	grid-area: icon;
+	justify-content: center;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.weather-widget-forecast {
+	font-size: 7vh;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.50);
+	grid-area: info;
+	display: grid;
+	align-content: center;
+}
+
+.weather-widget-calendar {
+	font-size: 3vh;
+	display: grid;
+	grid-area: calendar;
+	align-content: center;
+	color: white;
+	background-color: rgba(255, 0, 0, 0.50);
+}
+
+.temperature {
+	font-size: 10vmin;
+	text-align: center;
+	grid-area: temperature;
+}
+
+.graph img {
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.graph {
+	grid-area: graph;
+	border-top: 1px solid #771C21;
+	border-bottom: 1px solid #771C21;
+}
+
+.future_weather {
+	display: grid;
+	grid-area: future_weather;
+	text-align: center;
+	color: white;
+	margin-bottom: 0px;
+}
+
+.row {
+	grid-area: plates;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-column-gap: 15%;
+	align-items: center;
+	color: #771C21;
+}
+
+.future_weather_days {
+	margin: auto;
+}
+
+@media (max-width: 650px) {
+	.weather-widget-main {
+		grid-template-columns: auto [box]auto auto;
+	}
+	.weather-widget-container {
+		grid-template-columns: 100%;
+	}
+	.weather-widget-calendar {
+		font-size: 4vh;
+	}
+	.graph img {
+		margin-bottom: 3vh;
+	}
+	p {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+	.graph img {
+		margin-bottom: 3vh;
+	}
+	p {
+		margin: 0 auto;
+	}
+}
