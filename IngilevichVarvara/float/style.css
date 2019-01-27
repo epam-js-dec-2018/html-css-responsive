@@ -1,0 +1,142 @@
+body {
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+.widget-wrapper {
+	width: 50em;
+	height: 35.5em;
+	background-image: url("img/Paris.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left: 20%;
+	position: relative;
+}
+
+
+.weather-widget {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.current-weather {
+	margin-top: 15%;
+	margin-right: 10%;
+	float: right;
+}
+
+.current-day {
+	float: left;
+	/*margin-right: 4%;*/
+	margin-top: 3.5%;
+	opacity: 0.7;
+}
+
+.current-day span {
+	display: block;
+}
+
+.weather-info {
+	float: right;
+}
+
+.weather-forecast {
+    width: 100%;
+	position: absolute;
+	bottom: 4%;
+}
+
+.current-temp span:after {
+	content: "\00b0"
+}
+
+.current-day .week-day {
+	font-size: 2em;
+}
+
+.current-day .date {
+	font-size: 0.95em;
+}
+
+
+.current-temp span {
+	font-size: 5em;
+}
+
+.current-position {
+	margin-bottom: 8%;
+	font-size: 1.3em;
+}
+
+.current-wind span.temp-value {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 1.3em;
+	padding-left: 5%;
+	padding-right: 4%;
+}
+
+.current-wind .units {
+	font-size: 0.8em;
+}
+
+ul.switch-day {
+    width: 95%;
+    height: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+ul.switch-day li, ul.switch-day i {
+	display: block;
+	float: left;
+}
+
+ul.switch-day li span {
+    display: block;
+    margin-bottom: 5%;
+}
+
+.switch-day li {
+    width: 22%;
+    display: table-cell;
+  	vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid rgb(255,255,255);
+}
+
+.switch-day > *:nth-last-child(2){
+	border-right: none;
+}
+
+
+.switch-day img {
+	width: 30px;
+	height: 26px;
+}
+
+i {
+  margin-top: 5%;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  height: 0.9px;
+  width: 0.9px;
+}
+
+.next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.back {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+

@@ -1,0 +1,190 @@
+body {
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+.widget-wrapper {
+	width: 50em;
+	height: 35.5em;
+	background-image: url("img/Paris.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	margin-left: 20%;
+	position: relative;
+}
+
+.weather-widget {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: [row1-start] 20% [row1-end row2-start] 30% [row2-end row3-start] 20% [row3-end row4-start] 20% [row4-end];
+	grid-template-areas: "empty1"
+	"current"
+	"empty2"
+	"forecast";
+}
+
+.current-weather {
+	grid-area: current;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: "a b c d e e";
+	height: 5%;
+}
+
+.current-day {
+	grid-area: d;
+	margin-right: 4%;
+	margin-top: 3.5%;
+	opacity: 0.7;
+}
+
+.current-day span {
+	display: block;
+
+}
+
+.current-temp span:after {
+	content: "\00b0"
+}
+
+.current-temp span {
+	font-size: 5em;
+	font-weight: bold;
+	display: block;
+	margin-bottom: -3%;
+}
+
+.current-day .week-day {
+	font-size: 2em;
+}
+
+.weather-info {
+	grid-area: e;
+	display: grid;
+	grid-template-rows: 1fr 0.2fr 0.3fr;
+}
+
+.current-day .date {
+	font-size: 0.95em;
+}
+
+.current-position {
+	margin-bottom: 8%;
+	font-size: 1.4em;
+}
+
+.current-wind span.temp-value {
+	font-size: 1.7em;
+	padding-left: 4%;
+	padding-right: 2%;
+	font-weight: bold;
+}
+
+
+.weather-forecast {
+	display: grid;
+	grid-area: forecast;
+	grid-template-rows: [row1-start] 50% [row1-end row2-start] 50% [row2-end];
+	grid-template-areas: "empty"
+						"list";
+}
+
+
+.weather-forecast ul {
+	grid-area: list;
+	-webkit-padding-start: 0;
+	margin: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.weather-forecast ul * {
+	display: block;
+}
+
+.weather-forecast ul li {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 0.1fr 0.8fr 0.5fr 0fr;
+	grid-template-areas: "empty1 week-day empty2"
+	"empty3 img empty4"
+	"empty5 temp empty6"
+	"empty7 empty8 empty9";
+	align-content: center;
+	border-right: 1px solid rgb(255,255,255);
+}
+
+
+ul.switch-day li *:first-child {
+	display: block;
+	padding-bottom: 10px;
+	grid-area: week-day;
+	align-self: end;
+}
+
+ul.switch-day li *:last-child {
+	display: block;
+	padding-bottom: 10px;
+	grid-area: temp;
+	align-self: start;
+}
+
+ul.switch-day li *:last-child sup {
+	display: inline;
+}
+
+ul.switch-day li img {
+	grid-area: img;
+	width: 30px;
+	height: 26px;
+	align-self: center;
+}
+
+.weather-forecast ul li * {
+	justify-self: center;
+}
+
+.weather-forecast ul i {
+	display: block;
+	align-self: start;
+	margin-top: 30%;
+	justify-self: center;
+}
+
+.switch-day > *:nth-last-child(2){
+	border-right: none;
+}
+
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+  border-radius: 3px;
+  height: 0.9px;
+  width: 0.9px;
+}
+
+ul i:first-child {
+	margin-right: 3%;
+}
+
+ul i:last-child {
+	margin-left: 3%;
+}
+
+.next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.back {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+
