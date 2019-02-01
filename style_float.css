@@ -1,0 +1,132 @@
+@font-face {
+    font-family: LatoLight;
+    src: url(LatoLight.ttf);
+ }
+
+html {
+    color: whitesmoke;
+    font-family: LatoLight;
+}
+
+body
+     {
+    background: linear-gradient(to right, #F0F8FF, #E1E9F0); 
+    }
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    opacity: 0.6;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    margin-bottom: 60px;
+}
+
+headertext {
+    font-size: 70px;
+    text-align: center;
+}
+
+div.main {
+    width: 696px;
+    height: 435px;
+    background-image: url(back.png);
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     border: 0;
+     padding: 0;
+     margin: auto;
+     margin-bottom: 30px;
+}
+
+div.widget {
+    position:relative;
+    width: 200px;
+    height: 200px;;
+    top:20%;
+    left: 60%;
+}
+
+div.bottom {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    float: bottom;
+    background-color: black;
+    opacity: 0.6;
+    margin-top: 19.5%;
+}
+
+div.date {
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+
+div.temperature {
+    height: 50%;
+    width: 50%;
+    float: right;
+}
+
+div.wind {
+    height: 50%;
+    width: 50%;
+    float: right;
+}
+
+p.temperature_text {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10;
+    font-weight: bold;
+}
+
+p.wind_text {
+    font-size: 20px;
+    text-align: center;
+}
+
+table
+    {
+     width: 100%;
+    height: 100%;
+}
+
+td {
+     text-align: center;
+     background-position: center;
+     background-repeat: no-repeat;
+     line-height: 3.5;
+}
+
+td.rain {
+    background-image: url(rain.png);
+}
+
+td.cloudy {
+    background-image: url(cloudy.png);
+}
+
+td.sunny {
+    background-image: url(sunny.png);
+}
+
+td.rain {
+    background-image: url(rain.png);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    width: 696px;
+    background: #000;
+    background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+}
