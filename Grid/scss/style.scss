@@ -9,7 +9,6 @@ body {
     font-family: 'Lato', sans-serif;
     color: white;
     background: url('../images/bg.png');
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -25,8 +24,8 @@ li {
 
 body {
     display: grid;
-    justify-items: center;
-    align-items: center;
+    // justify-items: center;
+    // align-items: center;
 }
 
 
@@ -35,6 +34,8 @@ body {
     background: url(../images/Paris.png);
     background-repeat: no-repeat;
     display: grid;
+    justify-self: center;
+    align-self: center;
     grid-template: repeat(2,162px) 112px/repeat(3, 1fr);
 
     &__list-day {
@@ -95,14 +96,25 @@ body {
     grid-column: 1/-1;
     display: grid;
     grid-auto-flow: column;
-    align-items: center;
-    justify-items: center;
+    align-self: center;
+    // align-items: center;
+    // justify-items: center;
+
+    &__button-wrap {
+        justify-self: center;
+        align-self: center;
+    }
 
     &__item-nav {
         width: 100%;
         display: grid;
-        justify-items: center;
+        // justify-items: center;
         border-right: 1px solid white;
+
+        span,img {
+            align-self: center;
+            justify-self: center;
+        }
 
     }
 
@@ -213,13 +225,16 @@ body {
 
 // Mobile
 @media screen and (max-width: 700px) {
+    html{
+        min-width: 250px;
+    }
     .weather-widget {
         height: 100%;
         width: 100%;
         background: url(../images/Paris.png);
         background-repeat: no-repeat;
         background-size: cover;
-        grid-template: repeat(2, 38%) 24%/repeat(3, minmax(150px,1fr));
+        grid-template: repeat(2, 38%) 24%/repeat(3,1fr);
 
         &__wrapper {
             grid-column: 1/3;
@@ -230,7 +245,7 @@ body {
     .weather-nav {
 
         &__item-nav {
-            height: 65%;
+            // height: 65%;
         }
 
         li:nth-last-child(3) {
