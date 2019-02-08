@@ -18,7 +18,6 @@ body {
 }
 
 .widget {
-    background-color: #f1f8f9;
     border-radius: 10px 10px 15px 15px;
     box-shadow: 0px 21px 20.16px 0.84px rgba(0, 0, 0, 0.15);
     margin: 50px auto 0; 
@@ -27,8 +26,18 @@ body {
     height: 464px;
     display: -ms-grid;
     display: grid;
-    grid-template-rows: 52% 18.5% 29.5%;
-    -ms-grid-rows: 52% 18.5% 29.5%;
+    grid-template-rows: 70.5% 29.5%;
+    -ms-grid-rows: 70.5% 29.5%;
+    -ms-grid-columns: 1fr;
+}
+
+.main {
+    background-color: #f1f8f9;
+    border-radius: 10px 10px 0 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 73.76% 26.24%;
+    -ms-grid-rows: 73.76% 26.24%;
     -ms-grid-columns: 1fr;
 }
 
@@ -48,7 +57,8 @@ body {
 }
 
 .weather-icon {
-    place-self: center;
+    align-self: center;
+    justify-self: center;
     -ms-grid-row: 1;
     -ms-grid-column: 2; 
     -ms-grid-column-align: center; 
@@ -87,7 +97,7 @@ body {
 }
 
 .temperature-value::after {
-    content: ' O';
+    content: ' O';
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -162,7 +172,7 @@ body {
 }
 
 footer {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     background-color: #2e3335;
     border-radius: 0 0 10px 10px;
@@ -259,10 +269,16 @@ footer {
     }
 
     .widget {
+        border-radius: 10px;
         min-width: 300px; 
-        height: 328px;
+        height: 328px;     
+        grid-template-rows: 1fr;
+        -ms-grid-rows: 1fr;  
+    }
+
+    .main {
         grid-template-rows: 80% 20%;
-        -ms-grid-rows: 80% 20%;
+        -ms-grid-rows: 80% 20%;  
         border-radius: 10px;
     }
 

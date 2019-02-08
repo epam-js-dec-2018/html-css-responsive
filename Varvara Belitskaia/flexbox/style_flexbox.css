@@ -27,13 +27,18 @@ body {
     width: 20%;
     min-width: 389px; 
     height: 464px;
-    background-color: #f1f8f9;
     border-radius: 10px 10px 15px 15px;
     box-shadow: 0px 21px 20.16px 0.84px rgba(0, 0, 0, 0.15);
 }
 
+.main {
+    background-color: #f1f8f9;
+    border-radius: 10px 10px 0 0;
+    height: 70.5%
+}
+
 .weather-image-container{
-    height: 52%;
+    height: 73.76%;
     display: flex;
     justify-content: space-between;
 }
@@ -54,7 +59,7 @@ body {
 
 .current {
     display: flex;
-    height: 18.5%;
+    height: 26.24%;
     justify-content: space-between;
 }
 
@@ -77,7 +82,7 @@ body {
 }
 
 .temperature-value::after {
-    content: ' O';
+    content: ' O';
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -203,6 +208,11 @@ footer {
     .widget {
         min-width: 300px; 
         height: 328px;
+        border-radius: 10px;
+    }
+
+    .main {
+        height: 100%;
         border-radius: 10px;
     }
 
